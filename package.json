@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "another-json-schema": "^3.8.3",
+    "generate-schema": "^2.6.0",
+    "genson-js": "0.0.8",
+    "humlix": "^1.0.4",
+    "json-beautify": "^1.1.1",
+    "json-schema-generator": "^2.0.6",
+    "json-schema-to-openapi-schema": "^0.4.0",
+    "jsonschema": "^1.4.0",
+    "openapi-to-plantuml": "^1.0.3",
+    "openapi-transformer": "^0.7.1",
+    "postman-to-openapi": "^2.2.1",
+    "to-json-schema": "^0.2.5"
+  }
+}

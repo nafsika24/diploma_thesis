@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "36c9d415-ec2f-4489-a34d-7fbfb3b171d8",
+		"name": "Supporting Calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getCapabilities",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/getCapabilities",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"getCapabilities"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getCapabilities",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-key",
+								"value": "{{apiKey}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}://{{baseUrl}}/api/v3/getCapabilities",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v3",
+								"getCapabilities"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "POST, GET, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15795"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3db3-lkdkDcESXZZxbuX3AGdkIQMx5fs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 May 2022 11:01:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"diemID\": \"Uplift accounts\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-Uplift Accounts\",\n                \"offeringNameEndpoint\": \"admieupliftaccounts\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"ToBeFilled\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Week Ahead Total Load Forecast\",\n                \"offeringNameEndpoint\": \"entsoeweekaheadtotalloadforecast \"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market – Balancing Capacity per Product\",\n                \"offeringNameEndpoint\": \"admiebalancingcapacityperproduct\"\n            },\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Net Positions Daily\",\n                \"offeringNameEndpoint\": \"entsoenetpositionsdaily\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-Balancing Energy per Product\",\n                \"offeringNameEndpoint\": \"admiebalancingenergyperproduct\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"SCADA interconnections - totals\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-SCADA Interconnections Total\",\n                \"offeringNameEndpoint\": \"admiescadainterconnectionstotals\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"SCADA interconnections\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-SCADA Verified Interconnections (up to 31/10/20)\",\n                \"offeringNameEndpoint\": \"admiescadaverifiedinterconnections\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-SCADA Interconnections\",\n                \"offeringNameEndpoint\": \"admiescadainterconnections\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"RES MV MV up to 31.10.2020\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-RES MVLV Production (up to 31/10/20)\",\n                \"offeringNameEndpoint\": \"admieresmvlvproduction\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Prices of Activated Balancing Energy\",\n        \"datasetClass\": \"Transmission\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-Prices Of Activated Balancing Energy\",\n                \"offeringNameEndpoint\": \"admiepricesofactivatedbalancingenergy\"\n            },\n            {\n                \"sourceName\": \"HEnEx\",\n                \"datasetTitleEN\": \"GR Market-Market Results Prices\",\n                \"offeringNameEndpoint\": \"henexmarketresultsprices\"\n            },\n            {\n                \"sourceName\": \"HEnEx\",\n                \"datasetTitleEN\": \"GR Market-Market Results Prices Per Market\",\n                \"offeringNameEndpoint\": \"henexmarketresultspricespermarket\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Offered Day-ahead Transfer Capacity\",\n        \"datasetClass\": \"Transmission\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Offered Day Ahead Tranfer Capacity\",\n                \"offeringNameEndpoint\": \"entsoeofferedayaheadtranfercapacity\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Non verified installed RES capacity\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-Non Verified Installed RES Capacity per Type (MV)\",\n                \"offeringNameEndpoint\": \"admienonverifiedinstalledrescapacitymv\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Load Forecast\",\n        \"datasetClass\": \"Load\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Day Ahead Total Load Forecast\",\n                \"offeringNameEndpoint\": \"entsoedatotalloadforecast\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"ISP results\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Reserve Results per Type\",\n                \"offeringNameEndpoint\": \"ispreserveresultspertype\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Reserve Schedule Per Unit\",\n                \"offeringNameEndpoint\": \"ispreservescheduleperunit\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Schedule Per Unit\",\n                \"offeringNameEndpoint\": \"ispscheduleperunit\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP System Overview\",\n                \"offeringNameEndpoint\": \"ispsystemoverview\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Reserve Results\",\n                \"offeringNameEndpoint\": \"ispreserveresults\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"ISP requirements\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Requirements Non-Dispatchable RES Forecast\",\n                \"offeringNameEndpoint\": \"ispresnondispresforecast\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Requirements Commissioning Details\",\n                \"offeringNameEndpoint\": \"ispreqcommisioningdetails\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Requirements Totals\",\n                \"offeringNameEndpoint\": \"ispreqtotals\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Requirements Dispatchable RES Forecast (RESFit Portofolio)\",\n                \"offeringNameEndpoint\": \"ispreqdispresforecast\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Reserve Requirements\",\n                \"offeringNameEndpoint\": \"ispreservereq\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Requirements Mandatory Hydro Details\",\n                \"offeringNameEndpoint\": \"ispreqmandatoryhydrodetails\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Reserve Requirements Per Type\",\n                \"offeringNameEndpoint\": \"ispreservereqpertype\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Requirements Non Dispatchable Load Forecast\",\n                \"offeringNameEndpoint\": \"isprecnondisploadforecast\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Requirements Non Dispatchable Loss Forecast\",\n                \"offeringNameEndpoint\": \"isprecnondisplossforecast\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Imbalance Prices\",\n        \"datasetClass\": \"Transmission\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-Imbalance Prices\",\n                \"offeringNameEndpoint\": \"admieimbalanceprices\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Energy Marginal Price\",\n                \"offeringNameEndpoint\": \"ispenergymaginalprice\"\n            },\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Imbalance Prices Positive\",\n                \"offeringNameEndpoint\": \"entsoeimbalancepricespositive \"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"HEnEx Results border schedules all interconnections\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"HEnEx\",\n                \"datasetTitleEN\": \"GR Market-Market Results BorderSchedules All Interconnections\",\n                \"offeringNameEndpoint\": \"henexmarketresultsborderschedulesall\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"HEnEx Results border schedules\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"HEnEx\",\n                \"datasetTitleEN\": \"GR Market-Market Results BorderSchedules\",\n                \"offeringNameEndpoint\": \"henexmarketresultsborderschedules\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"HEnEx Pre-market results border schedules all interconections\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"HEnEx\",\n                \"datasetTitleEN\": \"GR Market-PreMarket Results BorderSchedules All Interconnections\",\n                \"offeringNameEndpoint\": \"henexpremarketresultsborderschedulesall\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"HEnEx Pre-market results border schedules\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"HEnEx\",\n                \"datasetTitleEN\": \"GR Market-PreMarket Results BorderSchedules\",\n                \"offeringNameEndpoint\": \"henexpremarketresultsborderschedules\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Greek CCGT schedules\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP CCGT Schedule (Total)\",\n                \"offeringNameEndpoint\": \"ispccgtscheduletotals\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP CCGT Schedule\",\n                \"offeringNameEndpoint\": \"ispccgtschedule\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Validated flows\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Validated Flows\",\n                \"offeringNameEndpoint\": \"desfavalidatedflows\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Total stock\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Total Stock\",\n                \"offeringNameEndpoint\": \"desfatotalstock\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Total offtake quantity\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Total Offtake Quantity\",\n                \"offeringNameEndpoint\": \"desfatotalofftakequantity\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Point capacities\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Point Capacities\",\n                \"offeringNameEndpoint\": \"desfapointcapacities\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Hourly predicted linepack\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Hourly Predicted Line Pack\",\n                \"offeringNameEndpoint\": \"desfahourlypredictedlinepack\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Hourly nominations\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Hourly Nominations\",\n                \"offeringNameEndpoint\": \"desfahourlynominations\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Hourly flows\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Hourly Flows\",\n                \"offeringNameEndpoint\": \"desfahourlyflows\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Historical nominations\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Historical Nominations\",\n                \"offeringNameEndpoint\": \"desfahistoricalnominations\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Daily regassification capacity\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Daily Regasification Capacity\",\n                \"offeringNameEndpoint\": \"desfadailyregassificationcapacity\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Daily linepack\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Daily Line Pack\",\n                \"offeringNameEndpoint\": \"desfadailylinepack\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA CGV\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA GCV\",\n                \"offeringNameEndpoint\": \"desfagcv\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Balancing prices\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Balancing Prices\",\n                \"offeringNameEndpoint\": \"desfabalancingprices\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Available storage\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Available Storage\",\n                \"offeringNameEndpoint\": \"desfaavailablestorage\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DESFA Aditional storage\",\n        \"datasetClass\": \"NG\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DESFA\",\n                \"datasetTitleEN\": \"GR Market-DESFA Additional Storage\",\n                \"offeringNameEndpoint\": \"desfaadditionalstorage\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Day-ahead Prices\",\n        \"datasetClass\": \"Transmission\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Day Ahead Prices\",\n                \"offeringNameEndpoint\": \"entsoedayaheadprices\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Day-ahead Commercial Schedules\",\n        \"datasetClass\": \"Generation\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-DayAhead Hydro Total Mandatory Schedules\",\n                \"offeringNameEndpoint\": \"admiedayaheadhydrototalmandatoryschedules\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-Day Ahead Scheduling Overview (historic 1/18-11/20)\",\n                \"offeringNameEndpoint\": \"admiedayaheadschedulingoverviewhistoric\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Day-ahead Aggregated Generation\",\n        \"datasetClass\": \"Generation\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Day Ahead Generation Forecast Total RES\",\n                \"offeringNameEndpoint\": \"entsoedaaggregatedgenforecasttotalres\"\n            },\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Day Ahead Aggregated Generation\",\n                \"offeringNameEndpoint\": \"entsoedaaggregatedgen\"\n            },\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Day Ahead Generation Forecast of particular RES\",\n                \"offeringNameEndpoint\": \"entsoedaaggregatedgenforecastfortype\"\n            },\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Day Ahead Generation Forecast per RES type\",\n                \"offeringNameEndpoint\": \"entsoedayaheadgenerationforecastperrestype\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DAPEEP orders\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DAPEEP\",\n                \"datasetTitleEN\": \"GR Market-Dapeep Orders Per Portfolio\",\n                \"offeringNameEndpoint\": \"dapeepordersperportfolio\"\n            },\n            {\n                \"sourceName\": \"DAPEEP\",\n                \"datasetTitleEN\": \"GR Market-Dapeep Orders Per Portfolio per Market\",\n                \"offeringNameEndpoint\": \"dapeepordersperportfoliopermarket\"\n            },\n            {\n                \"sourceName\": \"DAPEEP\",\n                \"datasetTitleEN\": \"GR Market-Dapeep Orders Per Unit\",\n                \"offeringNameEndpoint\": \"dapeepordersperunit\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"DAPEEP capacity\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"DAPEEP\",\n                \"datasetTitleEN\": \"GR Market-Dapeep Installed Capacity Sum\",\n                \"offeringNameEndpoint\": \"dapeepinstalledcapacitysum\"\n            },\n            {\n                \"sourceName\": \"DAPEEP\",\n                \"datasetTitleEN\": \"GR Market-Dapeep Installed Capacity\",\n                \"offeringNameEndpoint\": \"dapeepinstalledcapacity\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Cross-border\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Net Border Schedules\",\n                \"offeringNameEndpoint\": \"ispnetborderschedules\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Auction results\",\n        \"datasetClass\": \"N/A\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"JAO\",\n                \"datasetTitleEN\": \"JAO Auction Results\",\n                \"offeringNameEndpoint\": \"jaoauctionresults\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Aggregated Generation per Type\",\n        \"datasetClass\": \"Generation\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Aggregated Generation of particular type\",\n                \"offeringNameEndpoint\": \"entsoeaggregatedproductionfortype\"\n            },\n            {\n                \"sourceName\": \"HEnEx\",\n                \"datasetTitleEN\": \"GR Market-Market Results Per Production Technology\",\n                \"offeringNameEndpoint\": \"henexmarketresultsperproductiontechnology\"\n            },\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Aggregated Generation Per Type\",\n                \"offeringNameEndpoint\": \"entsoeaggregatedproductionpertype\"\n            },\n            {\n                \"sourceName\": \"HEnEx\",\n                \"datasetTitleEN\": \"GR Market-Market Results Per Production Technology Per Market\",\n                \"offeringNameEndpoint\": \"henexmarketresultsperproductiontechnologypermarket\"\n            },\n            {\n                \"sourceName\": \"HEnEx\",\n                \"datasetTitleEN\": \"GR Market-PreMarket Summary per Production Technology \",\n                \"offeringNameEndpoint\": \"henexpremarketsummaryperproductiontechnology\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-Non Verified RES Production (MV)\",\n                \"offeringNameEndpoint\": \"admienonverifiedresproductionpertypemv\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Actual Total Load\",\n        \"datasetClass\": \"Load\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Actual Total Load\",\n                \"offeringNameEndpoint\": \"entsoeactualtotalload\"\n            },\n            {\n                \"sourceName\": \"HEnEx\",\n                \"datasetTitleEN\": \"GR Market-Market Results Demand Per Market\",\n                \"offeringNameEndpoint\": \"henexmarketresultsdemandpermarket\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-SCADA Units Totals\",\n                \"offeringNameEndpoint\": \"admiescadaunitstotals\"\n            },\n            {\n                \"sourceName\": \"HEnEx\",\n                \"datasetTitleEN\": \"GR Market-PreMarket Results Demand\",\n                \"offeringNameEndpoint\": \"henexpremarketresultsdemand\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Dispatchable Load\",\n                \"offeringNameEndpoint\": \"ispdispload\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-SCADA Verified Loads Totals (up to 31/10/20)\",\n                \"offeringNameEndpoint\": \"admiescadaverifiedloadstotals\"\n            },\n            {\n                \"sourceName\": \"HEnEx\",\n                \"datasetTitleEN\": \"GR Market-Market Results Demand\",\n                \"offeringNameEndpoint\": \"henexmarketresultsdemand\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-SCADA System Load\",\n                \"offeringNameEndpoint\": \"admiescadasystemload\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Non Dispatchable Load\",\n                \"offeringNameEndpoint\": \"ispnondispatchableload\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Actual Generation Output per Generation Unit\",\n        \"datasetClass\": \"Generation\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-SCADA Units Load\",\n                \"offeringNameEndpoint\": \"admiescadaunitsload\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-SCADA Verified Units Loads (up to 31/10/20)\",\n                \"offeringNameEndpoint\": \"admiescadaverifiedunitsloads\"\n            }\n        ]\n    },\n    {\n        \"diemID\": \"Activated Balancing Energy\",\n        \"datasetClass\": \"Transmission\",\n        \"datasetSubClass\": \"\",\n        \"sources\": [\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Cleared Energy\",\n                \"offeringNameEndpoint\": \"ispclearedenergy\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Activated Energy\",\n                \"offeringNameEndpoint\": \"ispactivatedenergy\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-ISP Activated Energy (Total)\",\n                \"offeringNameEndpoint\": \"ispactivatedenergytotals\"\n            },\n            {\n                \"sourceName\": \"IPTO/GR\",\n                \"datasetTitleEN\": \"GR Market-Activated Balancing Energy (Total)\",\n                \"offeringNameEndpoint\": \"admieactivatedbalancingenergytotal\"\n            },\n            {\n                \"sourceName\": \"ENTSOe\",\n                \"datasetTitleEN\": \"Activated Balancing Energy (for Type)\",\n                \"offeringNameEndpoint\": \"entsoeactivatedbalancingenergy\"\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getCapabilities/offeringName",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/getCapabilities/admieupliftaccounts",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"getCapabilities",
+						"admieupliftaccounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "areaReference",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/areareference",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"areareference"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "areaReference/area",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"type": "text",
+						"value": "{{apiKey}}"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/areareference/SLOV",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"areareference",
+						"SLOV"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interconnections",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/interconnections",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"interconnections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "interconnections/interconnection",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"type": "text",
+						"value": "{{apiKey}}"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/interconnections/TR",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"interconnections",
+						"TR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productiontypes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/productiontypes",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"productiontypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productiontypes/type",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"type": "text",
+						"value": "{{apiKey}}"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/productiontypes/ot",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"productiontypes",
+						"ot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generationunits/areaRef",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/generationunits/GREECE_IPTO_CA_CTA",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"generationunits",
+						"GREECE_IPTO_CA_CTA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generationunits/areaRef/unitAbbrev",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"type": "text",
+						"value": "{{apiKey}}"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/generationunits/GREECE_IPTO_CA_CTA/MEG",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"generationunits",
+						"GREECE_IPTO_CA_CTA",
+						"MEG"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ngpoints",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-key",
+						"value": "{{apiKey}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ngpoints",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"data",
+						"ngpoints"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "protocol",
+			"value": "https"
+		},
+		{
+			"key": "baseUrl",
+			"value": "api.diem-platform.com"
+		},
+		{
+			"key": "apiKey",
+			"value": "ASLDKJASDJK2534S"
+		}
+	]
+}

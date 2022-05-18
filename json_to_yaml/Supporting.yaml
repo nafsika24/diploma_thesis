@@ -1,0 +1,185 @@
+openapi: 3.0.0
+info:
+  title: Supporting Calls
+  version: 1.0.0
+servers:
+  - url: https://api.diem-platform.com
+paths:
+  /api/v3/getCapabilities:
+    get:
+      tags:
+        - General
+      summary: getCapabilities
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v3/getCapabilities/admieupliftaccounts:
+    get:
+      tags:
+        - General
+      summary: getCapabilities/offeringName
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v3/data/areareference:
+    get:
+      tags:
+        - General
+      summary: areaReference
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v3/data/areareference/SLOV:
+    get:
+      tags:
+        - General
+      summary: areaReference/area
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v3/data/interconnections:
+    get:
+      tags:
+        - General
+      summary: interconnections
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v3/data/interconnections/TR:
+    get:
+      tags:
+        - General
+      summary: interconnections/interconnection
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v3/data/productiontypes:
+    get:
+      tags:
+        - General
+      summary: productiontypes
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v3/data/productiontypes/ot:
+    get:
+      tags:
+        - General
+      summary: productiontypes/type
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v3/data/generationunits/GREECE_IPTO_CA_CTA:
+    get:
+      tags:
+        - General
+      summary: generationunits/areaRef
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v3/data/generationunits/GREECE_IPTO_CA_CTA/MEG:
+    get:
+      tags:
+        - General
+      summary: generationunits/areaRef/unitAbbrev
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v3/data/ngpoints:
+    get:
+      tags:
+        - General
+      summary: ngpoints
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+components:
+  schemas:

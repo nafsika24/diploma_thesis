@@ -1,0 +1,749 @@
+{
+ "info": {
+  "_postman_id": "fdb564ed-1680-4cf4-99c6-6c2b60623f9c",
+  "name": "HeNex V3",
+  "description": "This collection includes all the APIs of version 3 for HeNex",
+  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+ },
+ "item": [
+  {
+   "name": "GR Market-Market Results Demand",
+   "event": [
+    {
+     "listen": "test",
+     "script": {
+      "exec": [
+       "pm.test(\"Status code is 200\", function () {",
+       "    pm.response.to.have.status(200);",
+       "});"
+      ],
+      "type": "text/javascript"
+     }
+    }
+   ],
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"class\":\"CRETE LOAD\",\r\n    \"direction\":1,\r\n    \"market\":\"DAM\",\r\n    \"meta\": {\r\n        \"requestParams\": {\r\n            \"year\": \"2021\",\r\n            \"month\": \"10\",\r\n            \"day\": \"28\",\r\n            \"duration\": \"20\",\r\n            \"class\": \"CRETE LOAD\",\r\n            \"market\": \"DAM\",\r\n            \"direction\": \"BUY\"\r\n        }\r\n    }\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsdemand/2021/10/28/20",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "henexmarketresultsdemand",
+      "2021",
+      "10",
+      "28",
+      "20"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-Market Results Demand",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "{{apiKey}}",
+        "type": "text"
+       }
+      ],
+      "body": {
+       "mode": "raw",
+       "raw": "{\r\n    \"class\":\"CRETE LOAD\",\r\n    \"direction\":1,\r\n    \"market\":\"DAM\",\r\n    \"meta\": {\r\n        \"requestParams\": {\r\n            \"year\": \"2021\",\r\n            \"month\": \"10\",\r\n            \"day\": \"28\",\r\n            \"duration\": \"20\",\r\n            \"class\": \"CRETE LOAD\",\r\n            \"market\": \"DAM\",\r\n            \"direction\": \"BUY\"\r\n        }\r\n    }\r\n}",
+       "options": {
+        "raw": {
+         "language": "json"
+        }
+       }
+      },
+      "url": {
+       "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsdemand/2021/10/28/20",
+       "protocol": "{{protocol}}",
+       "host": [
+        "{{baseUrl}}"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "henexmarketresultsdemand",
+        "2021",
+        "10",
+        "28",
+        "20"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "35366"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"8a26-vv+DakRYAD+mV8yxppq+WutTHDM\""
+      },
+      {
+       "key": "Date",
+       "value": "Sun, 15 May 2022 18:44:59 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"},\"class\":{\"type\":\"string\"},\"market\":{\"type\":\"string\"},\"direction\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"Load\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"ResolutionCode\":{\"type\":\"string\"},\"uom\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"ResolutionCode\",\"uom\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-Market Results BorderSchedules All Interconnections",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"class\":\"Imports\",\r\n    \"direction\":0,\r\n    \"market\":\"DAM\"\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsborderschedulesall/2020/10/28/20",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "henexmarketresultsborderschedulesall",
+      "2020",
+      "10",
+      "28",
+      "20"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-Market Results BorderSchedules All Interconnections",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "{{apiKey}}",
+        "type": "text"
+       }
+      ],
+      "body": {
+       "mode": "raw",
+       "raw": "{\r\n    \"class\":\"Imports\",\r\n    \"direction\":0,\r\n    \"market\":\"DAM\"\r\n}",
+       "options": {
+        "raw": {
+         "language": "json"
+        }
+       }
+      },
+      "url": {
+       "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsborderschedulesall/2020/10/28/20",
+       "protocol": "{{protocol}}",
+       "host": [
+        "{{baseUrl}}"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "henexmarketresultsborderschedulesall",
+        "2020",
+        "10",
+        "28",
+        "20"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "133325"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"208cd-HymOKp2P0H6fVT8CK8RfoteFYGY\""
+      },
+      {
+       "key": "Date",
+       "value": "Sun, 15 May 2022 21:14:04 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"},\"class\":{\"type\":\"string\"},\"market\":{\"type\":\"string\"},\"direction\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"MK-GR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"ResolutionCode\":{\"type\":\"string\"},\"uom\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"ResolutionCode\",\"uom\"]}},\"TR-GR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"ResolutionCode\":{\"type\":\"string\"},\"uom\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"ResolutionCode\",\"uom\"]}},\"AL-GR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"ResolutionCode\":{\"type\":\"string\"},\"uom\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"ResolutionCode\",\"uom\"]}},\"BG-GR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"ResolutionCode\":{\"type\":\"string\"},\"uom\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"ResolutionCode\",\"uom\"]}},\"IT-GR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"ResolutionCode\":{\"type\":\"string\"},\"uom\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"ResolutionCode\",\"uom\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-Market Results BorderSchedules",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"interconnection\":\"AL-GR\",\r\n    \"direction\":0,\r\n    \"market\":\"DAM\"\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsborderschedules/2021/10/29/3",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "henexmarketresultsborderschedules",
+      "2021",
+      "10",
+      "29",
+      "3"
+     ]
+    }
+   },
+   "response": []
+  },
+  {
+   "name": "GR Market-Market Results Per Production Technology",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"technology\":\"CRETE CONVENTIONAL\",\r\n    \"direction\":0,\r\n    \"market\":\"DAM\"\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsperproductiontechnology/2020/10/28/500",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "henexmarketresultsperproductiontechnology",
+      "2020",
+      "10",
+      "28",
+      "500"
+     ]
+    }
+   },
+   "response": []
+  },
+  {
+   "name": "GR Market-Market Results Per Production Technology Per Market",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "type": "text",
+      "value": "{{apiKey}}"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"technology\":\"CRETE CONVENTIONAL\",\r\n    \"direction\":0\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsperproductiontechnologypermarket/2020/10/28/2000",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "henexmarketresultsperproductiontechnologypermarket",
+      "2020",
+      "10",
+      "28",
+      "2000"
+     ]
+    }
+   },
+   "response": []
+  },
+  {
+   "name": "GR Market-Market Results Prices Per Market",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "type": "text",
+      "value": "{{apiKey}}"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"direction\":0\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultspricespermarket/2020/10/28/20",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "henexmarketresultspricespermarket",
+      "2020",
+      "10",
+      "28",
+      "20"
+     ]
+    }
+   },
+   "response": []
+  },
+  {
+   "name": "GR Market-Market Results Prices",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "type": "text",
+      "value": "{{apiKey}}"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"direction\":0,\r\n    \"market\":\"DAM\"\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsprices/2020/10/28/5",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "henexmarketresultsprices",
+      "2020",
+      "10",
+      "28",
+      "5"
+     ]
+    }
+   },
+   "response": []
+  },
+  {
+   "name": "GR Market-PreMarket Results BorderSchedules",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "type": "text",
+      "value": "{{apiKey}}"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"direction\":0,\r\n    \"interconnection\":\"AL-GR\"\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexpremarketresultsborderschedules/2020/10/28/5",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "henexpremarketresultsborderschedules",
+      "2020",
+      "10",
+      "28",
+      "5"
+     ]
+    }
+   },
+   "response": []
+  },
+  {
+   "name": "GR Market-PreMarket Results BorderSchedules All Interconnections",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "type": "text",
+      "value": "{{apiKey}}"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"direction\":0,\r\n    \"class\":\"Import\",\r\n    \"market\":\"DAM\",\r\n    \"timezone\":\"CET\"\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexpremarketresultsborderschedulesall/2020/10/28/5",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "henexpremarketresultsborderschedulesall",
+      "2020",
+      "10",
+      "28",
+      "5"
+     ]
+    }
+   },
+   "response": []
+  },
+  {
+   "name": "GR Market-PreMarket Results Demand",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "type": "text",
+      "value": "{{apiKey}}"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"direction\":1,\r\n    \"class\":\"LV\",\r\n    \"market\":\"DAM\"\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexpremarketresultsdemand/2020/10/28/5?format=csv&max=10",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "henexpremarketresultsdemand",
+      "2020",
+      "10",
+      "28",
+      "5"
+     ],
+     "query": [
+      {
+       "key": "format",
+       "value": "csv"
+      },
+      {
+       "key": "max",
+       "value": "10"
+      }
+     ]
+    }
+   },
+   "response": []
+  },
+  {
+   "name": "GR Market-PreMarket Summary per Production Technology",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "type": "text",
+      "value": "{{apiKey}}"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"direction\":0,\r\n    \"technology\":\"Lignite\",\r\n    \"market\":\"DAM\"\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexpremarketsummaryperproductiontechnology/2020/10/28/5",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "henexpremarketsummaryperproductiontechnology",
+      "2020",
+      "10",
+      "28",
+      "5"
+     ]
+    }
+   },
+   "response": []
+  },
+  {
+   "name": "GR Market-Market Results Demand Per Market",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "type": "text",
+      "value": "{{apiKey}}"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"direction\":0,\r\n    \"class\":\"HV\"\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsdemandpermarket/2020/10/28/500",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "henexmarketresultsdemandpermarket",
+      "2020",
+      "10",
+      "28",
+      "500"
+     ]
+    }
+   },
+   "response": []
+  }
+ ],
+ "event": [
+  {
+   "listen": "prerequest",
+   "script": {
+    "type": "text/javascript",
+    "exec": [
+     ""
+    ]
+   }
+  },
+  {
+   "listen": "test",
+   "script": {
+    "type": "text/javascript",
+    "exec": [
+     ""
+    ]
+   }
+  }
+ ],
+ "variable": [
+  {
+   "key": "baseUrl",
+   "value": "api.diem-platform.com"
+  },
+  {
+   "key": "protocol",
+   "value": "https"
+  },
+  {
+   "key": "apiKey",
+   "value": "ASLDKJASDJK2534S"
+  }
+ ]
+}

@@ -134,7 +134,7 @@ inquirer
         const input_file = String(res["input"])
         const output_file = String(res["output"])
         
-        const final_convert = await yaml_to_postman.yaml_to_postman(input_file,"./files/" + output_file)
+        const final_convert = await yaml_to_postman.yaml_to_postman("./files/" + input_file,"./files/" + output_file)
         console.log("")
         console.log('\x1b[31mConvertion Completed Successfully!')
         console.log("")

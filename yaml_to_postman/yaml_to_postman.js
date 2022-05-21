@@ -20,7 +20,7 @@ module.exports =  {
 
     yaml_to_postman: (inputFile,outputFile) => {
     
-     inputFile = "../yaml_to_postman/" + inputFile   
+     inputFile =  inputFile   
     var lineReader = require('readline').createInterface({
         input: fs.createReadStream(inputFile)
     });

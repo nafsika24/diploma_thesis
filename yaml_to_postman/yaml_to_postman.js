@@ -4,16 +4,7 @@ var GenerateSchema = require('generate-schema')
 
 var output;
 
-// get user input and output file
-// const myArgs = process.argv.slice(2);
-// if(myArgs.length < 2){
-//     console.log("Please provide two parameters. Input and output file.")
-//     process.exit()
-// }
 
-// get input and output files
-// const inputFile = String(myArgs[0])
-// const outputFile = String(myArgs[1])
 
 
 module.exports =  {

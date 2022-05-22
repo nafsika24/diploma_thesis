@@ -1,63 +1,3 @@
-// var fs1 = require('fs');
-
-// module.exports =  {
-
-//     visual_2: (inputFile,outputFile) => {
-
-//         var lineReader2 = require('readline').createInterface({
-//             input: fs1.createReadStream(inputFile)
-//         });
-
-//         var output = fs1.createWriteStream(outputFile);
-//         var x = 1;
-//         var state1 = false;
-//         var state2 = false
-//         const components_arr = []
-
-//         lineReader2.on('line', function (line) {
-//             if(line.includes("responses")){
-//                 state1 = true
-//                 //output.write("      x-codegen-request-body-name: " + rest+ '\n')
-//                 output.write(line + '\n')
-//             }
-//             else if(line.includes("content") && state1 ==  true){
-//                 state2 = true
-//                 output.write(line + '\n')
-//             }
-//             else if(line.includes("requestBody")){
-//                 state1 = false
-//                 output.write(line + '\n')
-//             }
-//             else if(line.includes("application/json: {}")){
-//                 state1 = state2 = false
-//             }
-//             else if(line.includes("type") && state1 == true && state2 ==  true){
-//                 components_arr.push("REST_ServiceResponse" + x )
-
-//                 output.write(line + '\n')
-//                 const res = '"#' + '/components/schemas/' + components_arr[components_arr.length - 1] + '"'
-//                 output.write('                $ref: ' + res + '\n')
-//                 state1 = false
-//                 state2 = false
-//             }
-
-//             else{
-//                 output.write(line + '\n')
-//             }
-//             x = x + 1
-//         });
-
-//         lineReader2.on('close', () => {
-
-//             for(let i = 0; i < components_arr.length; i++){
-//                 fs1.appendFileSync(outputFile, '     ' + components_arr[i] +':' + '\n' + '       type: object' + '\n');
-
-//             }
-//         });
-
-//     }}
-
-
 // Require Package
 const postmanToOpenApi = require('postman-to-openapi')
 var fs = require('fs');
@@ -76,18 +16,13 @@ var output;
 
 module.exports =  {
 
-        visual_1: (inputFile,outputFile,description_to_add) => {
+    visual_2: (inputFile,outputFile,description_to_add) => {
             
         const tempFile = "./files/output.yaml"
 
         // Promise callback style
         postmanToOpenApi(inputFile, tempFile, { defaultTag: 'General' })
             .then(result => {
-                //console.log(`OpenAPI specs: ${result}`)
-            })
-            .catch(err => {
-                console.log(err)
-            })
 
         // ============================ add addition description here ex. variables from Postman Collection ============================
         var variables = true
@@ -173,7 +108,13 @@ module.exports =  {
                 fs.appendFileSync(outputFile, '     ' + components_arr[i] +':' + '\n' + '       type: object' + '\n');
 
             }
-        });
+            
+            
+        });            })
+            .catch(err => {
+                console.log(err)
+            })
+
 
         
 

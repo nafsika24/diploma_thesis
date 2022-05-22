@@ -19,10 +19,31 @@ module.exports =  {
         visual_1: (inputFile,outputFile,description_to_add) => {
             
         const tempFile = "./files/output.yaml"
-
+        fs.readFileSync("./files/" + inputFile, (err, data) => {
+            if (err)
+              console.log(err);
+            else {
+              var json = JSON.parse(data);
+              var items = json["item"]
+              for(i = 0; i < items.length; i ++) {
+                  res = items[i]["response"]
+                  var schema = res;
+                  if(typeof(schema[0]) !== 'undefined'){
+                    var sc = GenerateSchema.json(JSON.parse(schema[0]["body"]))
+      
+                    schema[0]["body"] = JSON.stringify(sc)
+      
+                  }
+              }
+              
+            }
+      
+            const y =  fs.appendFileSync( "temp.json", JSON.stringify(json, null, " "))
+        })
         // Promise callback style
-        postmanToOpenApi(inputFile, tempFile, { defaultTag: 'General' })
+        postmanToOpenApi("temp.json", tempFile, { defaultTag: 'General' })
             .then(result => {
+            
 
         // ============================ add addition description here ex. variables from Postman Collection ============================
         var variables = true
@@ -108,7 +129,12 @@ module.exports =  {
                 fs.appendFileSync(outputFile, '     ' + components_arr[i] +':' + '\n' + '       type: object' + '\n');
 
             }
-        });            })
+
+
+
+            
+        });            
+    })
             .catch(err => {
                 console.log(err)
             })

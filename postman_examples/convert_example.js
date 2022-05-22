@@ -2,37 +2,19 @@ var fs = require('fs');
 const { exit } = require('process');
 const { Stream } = require('stream');
 var GenerateSchema = require('generate-schema')
+util = require('util');
 
-
-// const myArgs = process.argv.slice(2);
-
-// // Postman Collection Path
-// const postmanCollection = String(myArgs[0])
-
-// // Output OpenAPI Path
-// const outputFile = "./" + String(myArgs[1])
 
 module.exports =  {
 
-  examples_edit: (inputFile,outputFile) => {
+  examples_edit:  (inputFile,outputFile) => {
     
-    postmanCollection = "../postman_examples/" + inputFile   
-    var lineReader = require('readline').createInterface({
-        input: fs.createReadStream(postmanCollection)
-    });
+  
     
-  var output = fs.createWriteStream("./files/" + outputFile);
+ var output = fs.createWriteStream("./files/" + outputFile);
     
 
-  var lineReader = require('readline').createInterface({
-      input: fs.createReadStream(postmanCollection)
-  });
-
-
-  var response_found = false;
-  var _postman_previewlanguage_found = false;
-
-  fs.readFile(postmanCollection, (err, data) => {
+  fs.readFileSync(postmanCollection, (err, data) => {
       if (err)
         console.log(err);
       else {
@@ -48,11 +30,16 @@ module.exports =  {
 
             }
         }
-        output.write(JSON.stringify(json, null, " "))
+        
       }
-  })
 
-  return "Finished!!!"
+      //output.write(JSON.stringify(json, null, " "))
+  })
+  const y =  fs.appendFileSync( "temp.json", JSON.stringify(json, null, " "))
+
+  return ("res2")
+
+
     
 } 
 }

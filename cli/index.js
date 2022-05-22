@@ -1,3 +1,4 @@
+var fs = require('fs');
 const chalk = require('chalk');
 const clear = require('clear');
 const figlet = require('figlet');
@@ -65,12 +66,26 @@ inquirer
           const output_file = "./files/" +  String(res["output"])
           const descr = String(res["description"])
 
-         // const final_convert = await examples_edit.examples_edit(input_file,"temp.json")
+
+
+          async function demoPromise2() {
+            try {
+              let message =await visual_1.visual_1(input_file, output_file, descr)
+              console.log(message);
+            } catch (error) {
+              console.log("Error: " + error);
+            }
+          }
+         
+          demoPromise2();
+          
           console.log("Finished editig json")
-          const tovisual1 = await visual_1.visual_1("./files/temp.json", output_file, descr)
+         //const tovisual1 = await visual_1.visual_1("./files/temp.json", output_file, descr)
           console.log("")
           console.log('\x1b[31mConvertion Completed Successfully!')
           console.log("")
+        
+       
 
         }
         // else we continue without the response examples
@@ -81,7 +96,7 @@ inquirer
           const output_file = String(res["output"])
           const descr = String(res["description"])
 
-          const tovisual1 = await visual_1.visual_1("./files/" + input_file, "./files/" + output_file, descr)
+          const tovisual1 = await visual_2.visual_2("./files/" + input_file, "./files/" + output_file, descr)
           console.log("")
           console.log('\x1b[31mConvertion Completed Successfully!')
           console.log("")
@@ -121,9 +136,6 @@ inquirer
       console.log(chalk.red.bold("3. exit:"));  
       console.log(chalk.green("Exit the process.")) 
       console.log(" ")
-
-
-
 
      }
 

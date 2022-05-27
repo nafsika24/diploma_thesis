@@ -1,0 +1,575 @@
+openapi: 3.0.0
+info:
+  title: HeNex V3
+  description: This collection includes all the APIs of version 3 for HeNex
+  version: 1.0.0
+servers:
+  - url: https://api.diem-platform.com
+paths:
+  /api/v3/data/henexmarketresultsdemand/2021/10/28/20:
+    get:
+      tags:
+        - General
+      operationId:  GR Market-Market Results Demand
+      description: 
+      x-codegen-request-body-name: rest_service14request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service14request"
+            example:
+              class: CRETE LOAD
+              direction: 1
+              market: DAM
+              meta:
+                requestParams:
+                  year: '2021'
+                  month: '10'
+                  day: '28'
+                  duration: '20'
+                  class: CRETE LOAD
+                  market: DAM
+                  direction: BUY
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+              example:
+                value: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+              example:
+                value: '*'
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+              example:
+                value: Origin, X-Requested-With, Content-Type, Accept, x-auth-token
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+              example:
+                value: POST, GET, PUT, DELETE, OPTIONS
+            Content-Type:
+              schema:
+                type: string
+              example:
+                value: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+              example:
+                value: '35366'
+            ETag:
+              schema:
+                type: string
+              example:
+                value: W/"8a26-nVkKH0Zj/x/hRsT6mrMSQ/03pnE"
+            Date:
+              schema:
+                type: string
+              example:
+                value: Wed, 25 May 2022 16:55:26 GMT
+            Connection:
+              schema:
+                type: string
+              example:
+                value: keep-alive
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/REST_ServiceResponse90"
+              example:
+                $schema: http://json-schema.org/draft-04/schema#
+                type: object
+                properties:
+                  meta:
+                    type: object
+                    properties:
+                      requestParams:
+                        type: object
+                        properties:
+                          year:
+                            type: string
+                          month:
+                            type: string
+                          day:
+                            type: string
+                          duration:
+                            type: string
+                          class:
+                            type: string
+                          market:
+                            type: string
+                          direction:
+                            type: string
+                      timezone:
+                        type: string
+                      offeringName:
+                        type: string
+                      updatedOn:
+                        type: string
+                      source:
+                        type: string
+                  data:
+                    type: object
+                    properties:
+                      Load:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            DateTime:
+                              type: string
+                            value:
+                              type: number
+                            ResolutionCode:
+                              type: string
+                            uom:
+                              type: string
+                          required:
+                            - DateTime
+                            - value
+                            - ResolutionCode
+                            - uom
+  /api/v3/data/henexmarketresultsborderschedulesall/2020/10/28/20:
+    get:
+      tags:
+        - General
+      operationId:  GR Market-Market Results BorderSchedules All Interconnections
+      description: 
+      x-codegen-request-body-name: rest_service149request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service149request"
+            example:
+              class: Imports
+              direction: 0
+              market: DAM
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/henexmarketresultsborderschedules/2021/10/29/3:
+    get:
+      tags:
+        - General
+      operationId:  GR Market-Market Results BorderSchedules
+      description: 
+      x-codegen-request-body-name: rest_service174request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service174request"
+            example:
+              interconnection: AL-GR
+              direction: 0
+              market: DAM
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/henexmarketresultsperproductiontechnology/2020/10/28/500:
+    get:
+      tags:
+        - General
+      operationId:  GR Market-Market Results Per Production Technology
+      description: 
+      x-codegen-request-body-name: rest_service199request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service199request"
+            example:
+              technology: CRETE CONVENTIONAL
+              direction: 0
+              market: DAM
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/henexmarketresultsperproductiontechnologypermarket/2020/10/28/2000:
+    get:
+      tags:
+        - General
+      operationId:  GR Market-Market Results Per Production Technology Per Market
+      description: 
+      x-codegen-request-body-name: rest_service224request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service224request"
+            example:
+              technology: CRETE CONVENTIONAL
+              direction: 0
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/henexmarketresultspricespermarket/2020/10/28/20:
+    get:
+      tags:
+        - General
+      operationId:  GR Market-Market Results Prices Per Market
+      description: 
+      x-codegen-request-body-name: rest_service248request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service248request"
+            example:
+              direction: 0
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/henexmarketresultsprices/2020/10/28/5:
+    get:
+      tags:
+        - General
+      operationId:  GR Market-Market Results Prices
+      description: 
+      x-codegen-request-body-name: rest_service271request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service271request"
+            example:
+              direction: 0
+              market: DAM
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/henexpremarketresultsborderschedules/2020/10/28/5:
+    get:
+      tags:
+        - General
+      operationId:  GR Market-PreMarket Results BorderSchedules
+      description: 
+      x-codegen-request-body-name: rest_service295request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service295request"
+            example:
+              direction: 0
+              interconnection: AL-GR
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/henexpremarketresultsborderschedulesall/2020/10/28/5:
+    get:
+      tags:
+        - General
+      operationId:  GR Market-PreMarket Results BorderSchedules All Interconnections
+      description: 
+      x-codegen-request-body-name: rest_service319request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service319request"
+            example:
+              direction: 0
+              class: Import
+              market: DAM
+              timezone: CET
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/henexpremarketresultsdemand/2020/10/28/5:
+    get:
+      tags:
+        - General
+      operationId:  GR Market-PreMarket Results Demand
+      description: 
+      x-codegen-request-body-name: rest_service345request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service345request"
+            example:
+              direction: 1
+              class: LV
+              market: DAM
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+        - name: format
+          in: query
+          schema:
+            type: string
+          example: csv
+        - name: max
+          in: query
+          schema:
+            type: integer
+          example: '10'
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/henexpremarketsummaryperproductiontechnology/2020/10/28/5:
+    get:
+      tags:
+        - General
+      operationId:  GR Market-PreMarket Summary per Production Technology
+      description: 
+      x-codegen-request-body-name: rest_service380request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service380request"
+            example:
+              direction: 0
+              technology: Lignite
+              market: DAM
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+  /api/v3/data/henexmarketresultsdemandpermarket/2020/10/28/500:
+    get:
+      tags:
+        - General
+      operationId:  GR Market-Market Results Demand Per Market
+      description: 
+      x-codegen-request-body-name: rest_service405request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/rest_service405request"
+            example:
+              direction: 0
+              class: HV
+      parameters:
+        - name: x-auth-key
+          in: header
+          schema:
+            type: string
+          example: ASLDKJASDJK2534S
+      responses:
+        '200':
+          description: Successful response
+          content:
+components:
+  schemas:
+     rest_service14request:
+       type: object
+       properties: 
+         class: 
+           type:  string
+         direction: 
+           type:  string
+         market: 
+           type:  string
+         meta: 
+           $ref:"#/components/schemas/rest_service14request_meta
+     rest_service14request_meta:
+       type: object
+       properties: 
+         requestParams: 
+           $ref:"#/components/schemas/rest_service14request_requestParams
+     rest_service14request_requestParams:
+       type: object
+       properties: 
+         year: 
+           type:  string
+         month: 
+           type:  string
+         day: 
+           type:  string
+         duration: 
+           type:  string
+         class: 
+           type:  string
+         market: 
+           type:  string
+         direction: 
+           type:  string
+     REST_ServiceResponse90:
+       type: object
+     rest_service149request:
+       type: object
+       properties: 
+         class: 
+           type:  string
+         direction: 
+           type:  string
+         market: 
+           type:  string
+     rest_service174request:
+       type: object
+       properties: 
+         interconnection: 
+           type:  string
+         direction: 
+           type:  string
+         market: 
+           type:  string
+     rest_service199request:
+       type: object
+       properties: 
+         technology: 
+           type:  string
+         direction: 
+           type:  string
+         market: 
+           type:  string
+     rest_service224request:
+       type: object
+       properties: 
+         technology: 
+           type:  string
+         direction: 
+           type:  string
+     rest_service248request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+     rest_service271request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+         market: 
+           type:  string
+     rest_service295request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+         interconnection: 
+           type:  string
+     rest_service319request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+         class: 
+           type:  string
+         market: 
+           type:  string
+         timezone: 
+           type:  string
+     rest_service345request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+         class: 
+           type:  string
+         market: 
+           type:  string
+     rest_service380request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+         technology: 
+           type:  string
+         market: 
+           type:  string
+     rest_service405request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+         class: 
+           type:  string

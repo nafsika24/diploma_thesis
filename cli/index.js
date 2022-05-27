@@ -16,7 +16,7 @@ const visual_2 = require('../json_to_yaml/convert2')
 
 console.log(
   chalk.magenta(
-    figlet.textSync('kalispera kai kali vradia', { horizontalLayout: 'full' })
+    figlet.textSync('Welcome to the Converter', { horizontalLayout: 'full' })
   )
 );
 
@@ -63,37 +63,32 @@ inquirer
           console.log("yes")
           const res = await inquirer3.toVisualConvert();
           const input_file = String(res["input"])
-          const output_file = "./files/" +  String(res["output"])
+          //const output_file = "./files/" +  String(res["output"])
           const descr = String(res["description"])
 
-
+          output_file =  "./files/" + input_file.split(".json")[0] + "_forVisual.yaml"
 
           async function demoPromise2() {
             try {
-              let message =await visual_1.visual_1(input_file, output_file, descr)
-              console.log(message);
+              let message =  visual_1.visual_1(input_file, output_file, descr)
+              //console.log(message);
             } catch (error) {
               console.log("Error: " + error);
             }
           }
          
           demoPromise2();
-          
-          console.log("Finished editig json")
-         //const tovisual1 = await visual_1.visual_1("./files/temp.json", output_file, descr)
           console.log("")
           console.log('\x1b[31mConvertion Completed Successfully!')
           console.log("")
         
-       
-
         }
         // else we continue without the response examples
         else if (res["Option"] == "No"){
 
           const res = await inquirer3.toVisualConvert();
           const input_file = String(res["input"])
-          const output_file = String(res["output"])
+          output_file = input_file.split(".json")[0] + "_forVisual.yaml"
           const descr = String(res["description"])
 
           const tovisual1 = await visual_2.visual_2("./files/" + input_file, "./files/" + output_file, descr)
@@ -144,7 +139,7 @@ inquirer
         console.log("Openapi to Postman")
         const res = await inquirer2.toPostmanConvert();
         const input_file = String(res["input"])
-        const output_file = String(res["output"])
+        output_file = input_file.split(".yaml")[0] + "_forPostman.yaml"
         
         const final_convert = await yaml_to_postman.yaml_to_postman("./files/" + input_file,"./files/" + output_file)
         console.log("")

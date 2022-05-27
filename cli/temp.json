@@ -1,29 +1,12 @@
 {
  "info": {
-  "_postman_id": "fdb564ed-1680-4cf4-99c6-6c2b60623f9c",
-  "name": "HeNex V3",
-  "description": "This collection includes all the APIs of version 3 for HeNex",
+  "_postman_id": "18a81d57-856c-4a18-84e5-d8095b2dce5b",
+  "name": "admie ISP V3 Copy",
   "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
  },
  "item": [
   {
-   "name": "GR Market-Market Results Demand",
-   "event": [
-    {
-     "listen": "test",
-     "script": {
-      "exec": [
-       "pm.test(\"Status code is 200\", function () {",
-       "    pm.response.to.have.status(200);",
-       "});"
-      ],
-      "type": "text/javascript"
-     }
-    }
-   ],
-   "protocolProfileBehavior": {
-    "disableBodyPruning": true
-   },
+   "name": "GR Market-ISP CCGT Schedule",
    "request": {
     "method": "GET",
     "header": [
@@ -33,17 +16,8 @@
       "type": "text"
      }
     ],
-    "body": {
-     "mode": "raw",
-     "raw": "{\r\n    \"class\":\"CRETE LOAD\",\r\n    \"direction\":1,\r\n    \"market\":\"DAM\",\r\n    \"meta\": {\r\n        \"requestParams\": {\r\n            \"year\": \"2021\",\r\n            \"month\": \"10\",\r\n            \"day\": \"28\",\r\n            \"duration\": \"20\",\r\n            \"class\": \"CRETE LOAD\",\r\n            \"market\": \"DAM\",\r\n            \"direction\": \"BUY\"\r\n        }\r\n    }\r\n}",
-     "options": {
-      "raw": {
-       "language": "json"
-      }
-     }
-    },
     "url": {
-     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsdemand/2021/10/28/20",
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispccgtschedule/2020/06/23/20",
      "protocol": "{{protocol}}",
      "host": [
       "{{baseUrl}}"
@@ -52,175 +26,40 @@
       "api",
       "v3",
       "data",
-      "henexmarketresultsdemand",
-      "2021",
-      "10",
-      "28",
-      "20"
-     ]
-    }
-   },
-   "response": [
-    {
-     "name": "GR Market-Market Results Demand",
-     "originalRequest": {
-      "method": "GET",
-      "header": [
-       {
-        "key": "x-auth-key",
-        "value": "{{apiKey}}",
-        "type": "text"
-       }
-      ],
-      "body": {
-       "mode": "raw",
-       "raw": "{\r\n    \"class\":\"CRETE LOAD\",\r\n    \"direction\":1,\r\n    \"market\":\"DAM\",\r\n    \"meta\": {\r\n        \"requestParams\": {\r\n            \"year\": \"2021\",\r\n            \"month\": \"10\",\r\n            \"day\": \"28\",\r\n            \"duration\": \"20\",\r\n            \"class\": \"CRETE LOAD\",\r\n            \"market\": \"DAM\",\r\n            \"direction\": \"BUY\"\r\n        }\r\n    }\r\n}",
-       "options": {
-        "raw": {
-         "language": "json"
-        }
-       }
-      },
-      "url": {
-       "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsdemand/2021/10/28/20",
-       "protocol": "{{protocol}}",
-       "host": [
-        "{{baseUrl}}"
-       ],
-       "path": [
-        "api",
-        "v3",
-        "data",
-        "henexmarketresultsdemand",
-        "2021",
-        "10",
-        "28",
-        "20"
-       ]
-      }
-     },
-     "status": "OK",
-     "code": 200,
-     "_postman_previewlanguage": "json",
-     "header": [
-      {
-       "key": "X-Powered-By",
-       "value": "Express"
-      },
-      {
-       "key": "Access-Control-Allow-Origin",
-       "value": "*"
-      },
-      {
-       "key": "Access-Control-Allow-Headers",
-       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
-      },
-      {
-       "key": "Access-Control-Allow-Methods",
-       "value": "POST, GET, PUT, DELETE, OPTIONS"
-      },
-      {
-       "key": "Content-Type",
-       "value": "application/json; charset=utf-8"
-      },
-      {
-       "key": "Content-Length",
-       "value": "35366"
-      },
-      {
-       "key": "ETag",
-       "value": "W/\"8a26-vv+DakRYAD+mV8yxppq+WutTHDM\""
-      },
-      {
-       "key": "Date",
-       "value": "Sun, 15 May 2022 18:44:59 GMT"
-      },
-      {
-       "key": "Connection",
-       "value": "keep-alive"
-      }
-     ],
-     "cookie": [],
-     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"},\"class\":{\"type\":\"string\"},\"market\":{\"type\":\"string\"},\"direction\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"Load\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"ResolutionCode\":{\"type\":\"string\"},\"uom\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"ResolutionCode\",\"uom\"]}}}}}}"
-    }
-   ]
-  },
-  {
-   "name": "GR Market-Market Results BorderSchedules All Interconnections",
-   "protocolProfileBehavior": {
-    "disableBodyPruning": true
-   },
-   "request": {
-    "method": "GET",
-    "header": [
-     {
-      "key": "x-auth-key",
-      "value": "{{apiKey}}",
-      "type": "text"
-     }
-    ],
-    "body": {
-     "mode": "raw",
-     "raw": "{\r\n    \"class\":\"Imports\",\r\n    \"direction\":0,\r\n    \"market\":\"DAM\"\r\n}",
-     "options": {
-      "raw": {
-       "language": "json"
-      }
-     }
-    },
-    "url": {
-     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsborderschedulesall/2020/10/28/20",
-     "protocol": "{{protocol}}",
-     "host": [
-      "{{baseUrl}}"
-     ],
-     "path": [
-      "api",
-      "v3",
-      "data",
-      "henexmarketresultsborderschedulesall",
+      "ispccgtschedule",
       "2020",
-      "10",
-      "28",
+      "06",
+      "23",
       "20"
      ]
     }
    },
    "response": [
     {
-     "name": "GR Market-Market Results BorderSchedules All Interconnections",
+     "name": "GR Market-ISP CCGT Schedule",
      "originalRequest": {
       "method": "GET",
       "header": [
        {
         "key": "x-auth-key",
-        "value": "{{apiKey}}",
+        "value": "ASLDKJASDJK2534S",
         "type": "text"
        }
       ],
-      "body": {
-       "mode": "raw",
-       "raw": "{\r\n    \"class\":\"Imports\",\r\n    \"direction\":0,\r\n    \"market\":\"DAM\"\r\n}",
-       "options": {
-        "raw": {
-         "language": "json"
-        }
-       }
-      },
       "url": {
-       "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsborderschedulesall/2020/10/28/20",
-       "protocol": "{{protocol}}",
+       "raw": "https://localhost/api/v3/data/ispccgtschedule/2020/06/23/20",
+       "protocol": "https",
        "host": [
-        "{{baseUrl}}"
+        "localhost"
        ],
        "path": [
         "api",
         "v3",
         "data",
-        "henexmarketresultsborderschedulesall",
+        "ispccgtschedule",
         "2020",
-        "10",
-        "28",
+        "06",
+        "23",
         "20"
        ]
       }
@@ -251,15 +90,15 @@
       },
       {
        "key": "Content-Length",
-       "value": "133325"
+       "value": "111244"
       },
       {
        "key": "ETag",
-       "value": "W/\"208cd-HymOKp2P0H6fVT8CK8RfoteFYGY\""
+       "value": "W/\"1b28c-6l2QzipcLE+CtDSyo6iMA1LHAW0\""
       },
       {
        "key": "Date",
-       "value": "Sun, 15 May 2022 21:14:04 GMT"
+       "value": "Tue, 12 Oct 2021 10:07:05 GMT"
       },
       {
        "key": "Connection",
@@ -267,15 +106,12 @@
       }
      ],
      "cookie": [],
-     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"},\"class\":{\"type\":\"string\"},\"market\":{\"type\":\"string\"},\"direction\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"MK-GR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"ResolutionCode\":{\"type\":\"string\"},\"uom\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"ResolutionCode\",\"uom\"]}},\"TR-GR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"ResolutionCode\":{\"type\":\"string\"},\"uom\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"ResolutionCode\",\"uom\"]}},\"AL-GR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"ResolutionCode\":{\"type\":\"string\"},\"uom\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"ResolutionCode\",\"uom\"]}},\"BG-GR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"ResolutionCode\":{\"type\":\"string\"},\"uom\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"ResolutionCode\",\"uom\"]}},\"IT-GR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"ResolutionCode\":{\"type\":\"string\"},\"uom\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"ResolutionCode\",\"uom\"]}}}}}}"
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"ALOUMINIO\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"CCGTFlag1\":{\"type\":\"string\"},\"CCGTFlag2\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"CCGTFlag1\",\"CCGTFlag2\"]}},\"KOMOTINI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"CCGTFlag1\":{\"type\":\"string\"},\"CCGTFlag2\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"CCGTFlag1\",\"CCGTFlag2\"]}},\"LAVRIO4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"CCGTFlag1\":{\"type\":\"string\"},\"CCGTFlag2\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"CCGTFlag1\",\"CCGTFlag2\"]}},\"MEGALOPOLI_V\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"},\"CCGTFlag1\":{\"type\":\"string\"},\"CCGTFlag2\":{\"type\":\"string\"}},\"required\":[\"DateTime\",\"value\",\"CCGTFlag1\",\"CCGTFlag2\"]}}}}}}"
     }
    ]
   },
   {
-   "name": "GR Market-Market Results BorderSchedules",
-   "protocolProfileBehavior": {
-    "disableBodyPruning": true
-   },
+   "name": "GR Market-ISP Cleared Energy",
    "request": {
     "method": "GET",
     "header": [
@@ -285,17 +121,8 @@
       "type": "text"
      }
     ],
-    "body": {
-     "mode": "raw",
-     "raw": "{\r\n    \"interconnection\":\"AL-GR\",\r\n    \"direction\":0,\r\n    \"market\":\"DAM\"\r\n}",
-     "options": {
-      "raw": {
-       "language": "json"
-      }
-     }
-    },
     "url": {
-     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsborderschedules/2021/10/29/3",
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispclearedenergy/2020/06/23/20",
      "protocol": "{{protocol}}",
      "host": [
       "{{baseUrl}}"
@@ -304,18 +131,932 @@
       "api",
       "v3",
       "data",
-      "henexmarketresultsborderschedules",
+      "ispclearedenergy",
+      "2020",
+      "06",
+      "23",
+      "20"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Cleared Energy",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispclearedenergy/2020/06/23/20",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispclearedenergy",
+        "2020",
+        "06",
+        "23",
+        "20"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "33636"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"8364-aZLsY5zaoC8wP3nJF/eDagZz/ZM\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 10:09:44 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"Up\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"Down\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Non Dispatchable Load",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispnondispatchableload/2020/06/23/20",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispnondispatchableload",
+      "2020",
+      "06",
+      "23",
+      "20"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Non Dispatchable Load",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispnondispatchableload/2020/06/23/20",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispnondispatchableload",
+        "2020",
+        "06",
+        "23",
+        "20"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "33384"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"8268-IOWdEQFo6QVyA+0neOalo3LT7sI\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 10:11:17 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"ISPLoad\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ISPLosses\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Energy Marginal Price",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispenergymaginalprice/2020/06/23/20",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispenergymaginalprice",
+      "2020",
+      "06",
+      "23",
+      "20"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Energy Marginal Price",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispenergymaginalprice/2020/06/23/20",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispenergymaginalprice",
+        "2020",
+        "06",
+        "23",
+        "20"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "33339"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"823b-W6tBRfRxst8EICtpw2/4D0sukAo\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 10:29:50 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"Up\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"Down\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP System Overview",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispsystemoverview/2020/06/23/5",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispsystemoverview",
+      "2020",
+      "06",
+      "23",
+      "5"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP System Overview",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispsystemoverview/2020/06/23/5",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispsystemoverview",
+        "2020",
+        "06",
+        "23",
+        "5"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "45254"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"b0c6-WPvxAD29AtonahR7zDAyTIdPCQU\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 10:42:24 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"Mandatory Hydro Injections\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"Renewables\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"Thermal Units\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"Hydro Units\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"Total Production\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"Total Dispatchable Load\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"Net CBS Schedules\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Activated Energy",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispactivatedenergy/2020/06/23/2",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispactivatedenergy",
+      "2020",
+      "06",
+      "23",
+      "2"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Activated Energy",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispactivatedenergy/2020/06/23/5",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispactivatedenergy",
+        "2020",
+        "06",
+        "23",
+        "5"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "287652"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"463a4-lFicKhfRGxJWHQHGiAgOFavelKA\""
+      },
+      {
+       "key": "Date",
+       "value": "Wed, 13 Oct 2021 07:57:21 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"MELITI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MEGALOPOLI_V\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ALOUMINIO\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS5\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MEGALOPOLI3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"HERON2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ALIVERI5\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"PROTERGIA_CC\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MEGALOPOLI4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ELPEDISON_THESS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"HERON_CC\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AMYNDEO2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AMYNDEO1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"LAVRIO4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KARDIA3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KARDIA4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ELPEDISON_THISVI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"LAVRIO5\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"HERON1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KORINTHOS_POWER\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KOMOTINI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"HERON3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MOCK2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MOCK3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MOCK1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MOCK\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KASTRAKI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"SFIKIA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"POURNARI2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KREMASTA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ASOMATA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"STRATOS1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AGRAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"POURNARI1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"LADONAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"POLYFYTO\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"PLASTIRAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"PLATANOVRYSI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"P_AOOU\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"EDESSAIOS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ILARIONAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Requirements Dispatchable RES Forecast (RESFit Portofolio)",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispreqdispresforecast/2021/02/15/50",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispreqdispresforecast",
       "2021",
-      "10",
-      "29",
+      "02",
+      "15",
+      "50"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Requirements Dispatchable RES Forecast (RESFit Portofolio)",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispreqdispresforecast/2021/02/15/50",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispreqdispresforecast",
+        "2021",
+        "02",
+        "15",
+        "50"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "120223"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"1d59f-ZPlmdlnG/WDj/GJb4z997fCFfCU\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 11:05:00 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"RESFitPortfolio\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Requirements Non Dispatchable Load Forecast",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/isprecnondisploadforecast/2021/02/15/3",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "isprecnondisploadforecast",
+      "2021",
+      "02",
+      "15",
       "3"
      ]
     }
    },
-   "response": []
+   "response": [
+    {
+     "name": "GR Market-ISP Requirements Non Dispatchable Load Forecast",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/isprecnondisploadforecast/2021/02/15/3",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "isprecnondisploadforecast",
+        "2021",
+        "02",
+        "15",
+        "3"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "7862"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"1eb6-QueZf5PBmDp2mfRI98zIl7GaxCE\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 11:12:02 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"NonDispatchableLoad\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
   },
   {
-   "name": "GR Market-Market Results Per Production Technology",
+   "name": "GR Market-ISP Requirements Non Dispatchable Loss Forecast",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/isprecnondisplossforecast/2021/02/15/3",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "isprecnondisplossforecast",
+      "2021",
+      "02",
+      "15",
+      "3"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Requirements Non Dispatchable Loss Forecast",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/isprecnondisplossforecast/2021/02/15/3",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "isprecnondisplossforecast",
+        "2021",
+        "02",
+        "15",
+        "3"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "7720"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"1e28-udvWitRB0fPFH58dkgzGaZJfVEU\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 11:49:49 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"NonDispatchableLosses\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Requirements Non-Dispatchable RES Forecast",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispresnondispresforecast/2021/02/15/3",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispresnondispresforecast",
+      "2021",
+      "02",
+      "15",
+      "3"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Requirements Non-Dispatchable RES Forecast",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispresnondispresforecast/2021/02/15/3",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispresnondispresforecast",
+        "2021",
+        "02",
+        "15",
+        "3"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "7841"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"1ea1-nTNOOad5aIPPlk12BYNhnyd0lP4\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 11:58:25 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"NonDispatchableRES\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Reserve Requirements",
    "protocolProfileBehavior": {
     "disableBodyPruning": true
    },
@@ -330,7 +1071,7 @@
     ],
     "body": {
      "mode": "raw",
-     "raw": "{\r\n    \"technology\":\"CRETE CONVENTIONAL\",\r\n    \"direction\":0,\r\n    \"market\":\"DAM\"\r\n}",
+     "raw": "{\r\n    \"reserveType\":\"FCR\"\r\n}",
      "options": {
       "raw": {
        "language": "json"
@@ -338,7 +1079,7 @@
      }
     },
     "url": {
-     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsperproductiontechnology/2020/10/28/500",
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispreservereq/2021/02/15/3",
      "protocol": "{{protocol}}",
      "host": [
       "{{baseUrl}}"
@@ -347,18 +1088,187 @@
       "api",
       "v3",
       "data",
-      "henexmarketresultsperproductiontechnology",
-      "2020",
-      "10",
-      "28",
-      "500"
+      "ispreservereq",
+      "2021",
+      "02",
+      "15",
+      "3"
      ]
     }
    },
-   "response": []
+   "response": [
+    {
+     "name": "GR Market-ISP Reserve Requirements",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "body": {
+       "mode": "raw",
+       "raw": "{\r\n    \"reserveType\":\"RR\"\r\n}",
+       "options": {
+        "raw": {
+         "language": "json"
+        }
+       }
+      },
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispreservereq/2021/02/15/3",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispreservereq",
+        "2021",
+        "02",
+        "15",
+        "3"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "14629"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"3925-fwVva6WEzerdd+I3ldOSRXTlcCU\""
+      },
+      {
+       "key": "Set-Cookie",
+       "value": "connect.sid=s%3AlCoLrNW2KmbG0VjsQmyk2abdy1KsTYs5.7BiqyjKldYKDaf7swJnxBVwZw6e5%2B4uWf6F8kQgy82w; Path=/; HttpOnly"
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 12:16:21 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"},\"reserveType\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"Up\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"Down\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    },
+    {
+     "name": "GR Market-ISP Reserve Requirements",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "body": {
+       "mode": "raw",
+       "raw": "{\r\n    \"reserveType\":\"FCR\"\r\n}",
+       "options": {
+        "raw": {
+         "language": "json"
+        }
+       }
+      },
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispreservereq/2021/02/15/3",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispreservereq",
+        "2021",
+        "02",
+        "15",
+        "3"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "14884"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"3a24-7iL0rNQY4N0KnJRflp9kLtn2gbk\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 12:16:47 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\n    \"meta\": {\n        \"requestParams\": {\n            \"year\": \"2021\",\n            \"month\": \"02\",\n            \"day\": \"15\",\n            \"duration\": \"3\",\n            \"reserveType\": \"FCR\"\n        },\n        \"timezone\": \"UTC\",\n        \"offeringName\": \"ispreservereq\",\n        \"updatedOn\": \"2021-10-12T06:25:29.000Z\",\n        \"source\": \"admie\"\n    },\n    \"data\": {\n        \"Up\": [\n            {\n                \"DateTime\": \"2021-02-15T00:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T00:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T01:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T01:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T02:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T02:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T03:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T03:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T04:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T04:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T05:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T05:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T06:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T06:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T07:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T07:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T08:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T08:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T09:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T09:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T10:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T10:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T11:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T11:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T12:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T12:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T13:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T13:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T14:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T14:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T15:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T15:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T16:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T16:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T17:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T17:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T18:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T18:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T19:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T19:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T20:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T20:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T21:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T21:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T22:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T22:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T23:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T23:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T00:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T00:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T01:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T01:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T02:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T02:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T03:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T03:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T04:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T04:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T05:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T05:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T06:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T06:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T07:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T07:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T08:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T08:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T09:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T09:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T10:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T10:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T11:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T11:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T12:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T12:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T13:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T13:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T14:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T14:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T15:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T15:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T16:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T16:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T17:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T17:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T18:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T18:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T19:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T19:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T20:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T20:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T21:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T21:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T22:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T22:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T23:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T23:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T00:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T00:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T01:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T01:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T02:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T02:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T03:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T03:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T04:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T04:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T05:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T05:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T06:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T06:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T07:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T07:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T08:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T08:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T09:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T09:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T10:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T10:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T11:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T11:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T12:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T12:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T13:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T13:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T14:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T14:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T15:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T15:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T16:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T16:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T17:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T17:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T18:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T18:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T19:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T19:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T20:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T20:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T21:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T21:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T22:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T22:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T23:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T23:30:00.000Z\",\n                \"value\": 47\n            }\n        ],\n        \"Down\": [\n            {\n                \"DateTime\": \"2021-02-15T00:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-15T00:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-15T01:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-15T01:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-15T02:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-15T02:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-15T03:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-15T03:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-15T04:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-15T04:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T05:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T05:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T06:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T06:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T07:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T07:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T08:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T08:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T09:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T09:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T10:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T10:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T11:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T11:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T12:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T12:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T13:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T13:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T14:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T14:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T15:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T15:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T16:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T16:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T17:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T17:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T18:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T18:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T19:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T19:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T20:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T20:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T21:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T21:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T22:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T22:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-15T23:00:00.000Z\",\n                \"value\": 0\n            },\n            {\n                \"DateTime\": \"2021-02-15T23:30:00.000Z\",\n                \"value\": 0\n            },\n            {\n                \"DateTime\": \"2021-02-16T00:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T00:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T01:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T01:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T02:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T02:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T03:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T03:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T04:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T04:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T05:00:00.000Z\",\n                \"value\": 27\n            },\n            {\n                \"DateTime\": \"2021-02-16T05:30:00.000Z\",\n                \"value\": 27\n            },\n            {\n                \"DateTime\": \"2021-02-16T06:00:00.000Z\",\n                \"value\": 27\n            },\n            {\n                \"DateTime\": \"2021-02-16T06:30:00.000Z\",\n                \"value\": 27\n            },\n            {\n                \"DateTime\": \"2021-02-16T07:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T07:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T08:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T08:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T09:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T09:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T10:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T10:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T11:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T11:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T12:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T12:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T13:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T13:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T14:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T14:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T15:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T15:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T16:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T16:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T17:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T17:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T18:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T18:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T19:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T19:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-16T20:00:00.000Z\",\n                \"value\": 27\n            },\n            {\n                \"DateTime\": \"2021-02-16T20:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T21:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T21:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T22:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T22:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T23:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-16T23:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-17T00:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-17T00:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-17T01:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-17T01:30:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-17T02:00:00.000Z\",\n                \"value\": 17\n            },\n            {\n                \"DateTime\": \"2021-02-17T02:30:00.000Z\",\n                \"value\": 17\n            },\n            {\n                \"DateTime\": \"2021-02-17T03:00:00.000Z\",\n                \"value\": 17\n            },\n            {\n                \"DateTime\": \"2021-02-17T03:30:00.000Z\",\n                \"value\": 17\n            },\n            {\n                \"DateTime\": \"2021-02-17T04:00:00.000Z\",\n                \"value\": 17\n            },\n            {\n                \"DateTime\": \"2021-02-17T04:30:00.000Z\",\n                \"value\": 17\n            },\n            {\n                \"DateTime\": \"2021-02-17T05:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T05:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T06:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T06:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T07:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T07:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T08:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T08:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T09:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T09:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T10:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T10:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T11:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T11:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T12:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T12:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T13:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T13:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T14:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T14:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T15:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T15:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T16:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T16:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T17:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T17:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T18:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T18:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T19:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T19:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T20:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T20:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T21:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T21:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T22:00:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T22:30:00.000Z\",\n                \"value\": 47\n            },\n            {\n                \"DateTime\": \"2021-02-17T23:00:00.000Z\",\n                \"value\": 7\n            },\n            {\n                \"DateTime\": \"2021-02-17T23:30:00.000Z\",\n                \"value\": 7\n            }\n        ]\n    }\n}"
+    }
+   ]
   },
   {
-   "name": "GR Market-Market Results Per Production Technology Per Market",
+   "name": "GR Market-ISP Reserve Requirements Per Type",
    "protocolProfileBehavior": {
     "disableBodyPruning": true
    },
@@ -367,13 +1277,13 @@
     "header": [
      {
       "key": "x-auth-key",
-      "type": "text",
-      "value": "{{apiKey}}"
+      "value": "{{apiKey}}",
+      "type": "text"
      }
     ],
     "body": {
      "mode": "raw",
-     "raw": "{\r\n    \"technology\":\"CRETE CONVENTIONAL\",\r\n    \"direction\":0\r\n}",
+     "raw": "{\r\n    \"reserveDirection\":\"UP\"\r\n}",
      "options": {
       "raw": {
        "language": "json"
@@ -381,7 +1291,7 @@
      }
     },
     "url": {
-     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsperproductiontechnologypermarket/2020/10/28/2000",
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispreservereqpertype/2021/02/15/3",
      "protocol": "{{protocol}}",
      "host": [
       "{{baseUrl}}"
@@ -390,41 +1300,112 @@
       "api",
       "v3",
       "data",
-      "henexmarketresultsperproductiontechnologypermarket",
-      "2020",
-      "10",
-      "28",
-      "2000"
+      "ispreservereqpertype",
+      "2021",
+      "02",
+      "15",
+      "3"
      ]
     }
    },
-   "response": []
+   "response": [
+    {
+     "name": "GR Market-ISP Reserve Requirements Per Type",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "body": {
+       "mode": "raw",
+       "raw": "{\r\n    \"reserveDirection\":\"UP\"\r\n}",
+       "options": {
+        "raw": {
+         "language": "json"
+        }
+       }
+      },
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispreservereqpertype/2021/02/15/3",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispreservereqpertype",
+        "2021",
+        "02",
+        "15",
+        "3"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "36994"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"9082-lj79WVI49U2KtlMUaHrR4ZJtiwo\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 12:39:17 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"},\"reserveDirection\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"mFRR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"Spinning RR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"RR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"FCR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"aFRR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
   },
   {
-   "name": "GR Market-Market Results Prices Per Market",
-   "protocolProfileBehavior": {
-    "disableBodyPruning": true
-   },
+   "name": "GR Market-ISP Requirements Totals",
    "request": {
     "method": "GET",
     "header": [
      {
       "key": "x-auth-key",
-      "type": "text",
-      "value": "{{apiKey}}"
+      "value": "{{apiKey}}",
+      "type": "text"
      }
     ],
-    "body": {
-     "mode": "raw",
-     "raw": "{\r\n    \"direction\":0\r\n}",
-     "options": {
-      "raw": {
-       "language": "json"
-      }
-     }
-    },
     "url": {
-     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultspricespermarket/2020/10/28/20",
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispreqtotals/2021/02/15/3",
      "protocol": "{{protocol}}",
      "host": [
       "{{baseUrl}}"
@@ -433,223 +1414,208 @@
       "api",
       "v3",
       "data",
-      "henexmarketresultspricespermarket",
-      "2020",
-      "10",
-      "28",
+      "ispreqtotals",
+      "2021",
+      "02",
+      "15",
+      "3"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Requirements Totals",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispreqtotals/2021/02/15/3",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispreqtotals",
+        "2021",
+        "02",
+        "15",
+        "3"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "37963"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"944b-8j02PKYcF0EMjM7Ouqp8meCyhMY\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 13:29:57 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"NonDispatchableLoadForecastTotal\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"RESForecastTotal\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MandatoryHydroTotal\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"CommissioningTotal\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ReserveRequirementsTotal\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Requirements Commissioning Details",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispreqcommisioningdetails/2021/03/1/20",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispreqcommisioningdetails",
+      "2021",
+      "03",
+      "1",
       "20"
      ]
     }
    },
-   "response": []
-  },
-  {
-   "name": "GR Market-Market Results Prices",
-   "protocolProfileBehavior": {
-    "disableBodyPruning": true
-   },
-   "request": {
-    "method": "GET",
-    "header": [
-     {
-      "key": "x-auth-key",
-      "type": "text",
-      "value": "{{apiKey}}"
-     }
-    ],
-    "body": {
-     "mode": "raw",
-     "raw": "{\r\n    \"direction\":0,\r\n    \"market\":\"DAM\"\r\n}",
-     "options": {
-      "raw": {
-       "language": "json"
+   "response": [
+    {
+     "name": "GR Market-ISP Requirements Commissioning Details",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispreqcommisioningdetails/2021/03/1/20",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispreqcommisioningdetails",
+        "2021",
+        "03",
+        "1",
+        "20"
+       ]
       }
-     }
-    },
-    "url": {
-     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsprices/2020/10/28/5",
-     "protocol": "{{protocol}}",
-     "host": [
-      "{{baseUrl}}"
-     ],
-     "path": [
-      "api",
-      "v3",
-      "data",
-      "henexmarketresultsprices",
-      "2020",
-      "10",
-      "28",
-      "5"
-     ]
-    }
-   },
-   "response": []
-  },
-  {
-   "name": "GR Market-PreMarket Results BorderSchedules",
-   "protocolProfileBehavior": {
-    "disableBodyPruning": true
-   },
-   "request": {
-    "method": "GET",
-    "header": [
-     {
-      "key": "x-auth-key",
-      "type": "text",
-      "value": "{{apiKey}}"
-     }
-    ],
-    "body": {
-     "mode": "raw",
-     "raw": "{\r\n    \"direction\":0,\r\n    \"interconnection\":\"AL-GR\"\r\n}",
-     "options": {
-      "raw": {
-       "language": "json"
-      }
-     }
-    },
-    "url": {
-     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexpremarketresultsborderschedules/2020/10/28/5",
-     "protocol": "{{protocol}}",
-     "host": [
-      "{{baseUrl}}"
-     ],
-     "path": [
-      "api",
-      "v3",
-      "data",
-      "henexpremarketresultsborderschedules",
-      "2020",
-      "10",
-      "28",
-      "5"
-     ]
-    }
-   },
-   "response": []
-  },
-  {
-   "name": "GR Market-PreMarket Results BorderSchedules All Interconnections",
-   "protocolProfileBehavior": {
-    "disableBodyPruning": true
-   },
-   "request": {
-    "method": "GET",
-    "header": [
-     {
-      "key": "x-auth-key",
-      "type": "text",
-      "value": "{{apiKey}}"
-     }
-    ],
-    "body": {
-     "mode": "raw",
-     "raw": "{\r\n    \"direction\":0,\r\n    \"class\":\"Import\",\r\n    \"market\":\"DAM\",\r\n    \"timezone\":\"CET\"\r\n}",
-     "options": {
-      "raw": {
-       "language": "json"
-      }
-     }
-    },
-    "url": {
-     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexpremarketresultsborderschedulesall/2020/10/28/5",
-     "protocol": "{{protocol}}",
-     "host": [
-      "{{baseUrl}}"
-     ],
-     "path": [
-      "api",
-      "v3",
-      "data",
-      "henexpremarketresultsborderschedulesall",
-      "2020",
-      "10",
-      "28",
-      "5"
-     ]
-    }
-   },
-   "response": []
-  },
-  {
-   "name": "GR Market-PreMarket Results Demand",
-   "protocolProfileBehavior": {
-    "disableBodyPruning": true
-   },
-   "request": {
-    "method": "GET",
-    "header": [
-     {
-      "key": "x-auth-key",
-      "type": "text",
-      "value": "{{apiKey}}"
-     }
-    ],
-    "body": {
-     "mode": "raw",
-     "raw": "{\r\n    \"direction\":1,\r\n    \"class\":\"LV\",\r\n    \"market\":\"DAM\"\r\n}",
-     "options": {
-      "raw": {
-       "language": "json"
-      }
-     }
-    },
-    "url": {
-     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexpremarketresultsdemand/2020/10/28/5?format=csv&max=10",
-     "protocol": "{{protocol}}",
-     "host": [
-      "{{baseUrl}}"
-     ],
-     "path": [
-      "api",
-      "v3",
-      "data",
-      "henexpremarketresultsdemand",
-      "2020",
-      "10",
-      "28",
-      "5"
-     ],
-     "query": [
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
       {
-       "key": "format",
-       "value": "csv"
+       "key": "X-Powered-By",
+       "value": "Express"
       },
       {
-       "key": "max",
-       "value": "10"
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "15036"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"3abc-BzZQOHtcf/nWsW6LDXJ0b2Bn4vk\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 13:37:27 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
       }
-     ]
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"HERON_CC\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KOMOTINI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
     }
-   },
-   "response": []
+   ]
   },
   {
-   "name": "GR Market-PreMarket Summary per Production Technology",
-   "protocolProfileBehavior": {
-    "disableBodyPruning": true
-   },
+   "name": "GR Market-ISP Requirements Mandatory Hydro Details",
    "request": {
     "method": "GET",
     "header": [
      {
       "key": "x-auth-key",
-      "type": "text",
-      "value": "{{apiKey}}"
+      "value": "{{apiKey}}",
+      "type": "text"
      }
     ],
-    "body": {
-     "mode": "raw",
-     "raw": "{\r\n    \"direction\":0,\r\n    \"technology\":\"Lignite\",\r\n    \"market\":\"DAM\"\r\n}",
-     "options": {
-      "raw": {
-       "language": "json"
-      }
-     }
-    },
     "url": {
-     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexpremarketsummaryperproductiontechnology/2020/10/28/5",
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispreqmandatoryhydrodetails/2021/03/1/2",
      "protocol": "{{protocol}}",
      "host": [
       "{{baseUrl}}"
@@ -658,18 +1624,92 @@
       "api",
       "v3",
       "data",
-      "henexpremarketsummaryperproductiontechnology",
-      "2020",
-      "10",
-      "28",
-      "5"
+      "ispreqmandatoryhydrodetails",
+      "2021",
+      "03",
+      "1",
+      "2"
      ]
     }
    },
-   "response": []
+   "response": [
+    {
+     "name": "GR Market-ISP Requirements Mandatory Hydro Details",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispreqmandatoryhydrodetails/2021/03/1/2",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispreqmandatoryhydrodetails",
+        "2021",
+        "03",
+        "1",
+        "2"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "87783"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"156e7-Vpg8B4EVZNtPckttYRwg4jPisVU\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 13:51:29 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"THESAVROS1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KASTRAKI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"SFIKIA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"POURNARI2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KREMASTA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ASOMATA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"STRATOS1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AGRAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"POURNARI1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"LADONAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"POLYFYTO\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"PLASTIRAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"PLATANOVRYSI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"P_AOOU\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"EDESSAIOS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ILARIONAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
   },
   {
-   "name": "GR Market-Market Results Demand Per Market",
+   "name": "GR Market-ISP Reserve Results",
    "protocolProfileBehavior": {
     "disableBodyPruning": true
    },
@@ -678,13 +1718,13 @@
     "header": [
      {
       "key": "x-auth-key",
-      "type": "text",
-      "value": "{{apiKey}}"
+      "value": "{{apiKey}}",
+      "type": "text"
      }
     ],
     "body": {
      "mode": "raw",
-     "raw": "{\r\n    \"direction\":0,\r\n    \"class\":\"HV\"\r\n}",
+     "raw": "{\r\n    \"reserveType\":\"FCR\"\r\n}",
      "options": {
       "raw": {
        "language": "json"
@@ -692,7 +1732,7 @@
      }
     },
     "url": {
-     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/henexmarketresultsdemandpermarket/2020/10/28/500",
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispreserveresults/2021/03/1/2",
      "protocol": "{{protocol}}",
      "host": [
       "{{baseUrl}}"
@@ -701,15 +1741,879 @@
       "api",
       "v3",
       "data",
-      "henexmarketresultsdemandpermarket",
-      "2020",
-      "10",
-      "28",
-      "500"
+      "ispreserveresults",
+      "2021",
+      "03",
+      "1",
+      "2"
      ]
     }
    },
-   "response": []
+   "response": [
+    {
+     "name": "GR Market-ISP Reserve Results",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "body": {
+       "mode": "raw",
+       "raw": "{\r\n    \"reserveType\":\"FCR\"\r\n}",
+       "options": {
+        "raw": {
+         "language": "json"
+        }
+       }
+      },
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispreserveresults/2021/03/1/2",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispreserveresults",
+        "2021",
+        "03",
+        "1",
+        "2"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "9995"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"270b-gkbdg5nI3keK6to2Drt+EAYSRuI\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 14:08:36 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"},\"reserveType\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"Up\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"Down\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Reserve Results per Type",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"reserveDirection\":\"UP\"\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispreserveresultspertype/2021/03/1/2",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispreserveresultspertype",
+      "2021",
+      "03",
+      "1",
+      "2"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Reserve Results per Type",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "body": {
+       "mode": "raw",
+       "raw": "{\r\n    \"reserveDirection\":\"UP\"\r\n}",
+       "options": {
+        "raw": {
+         "language": "json"
+        }
+       }
+      },
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispreserveresultspertype/2021/03/1/2",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispreserveresultspertype",
+        "2021",
+        "03",
+        "1",
+        "2"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "24757"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"60b5-Ru+fu34GMcn3+RN3RHw1AH4OnRQ\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 14:21:58 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"},\"reserveDirection\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"FCR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"aFRR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"mFRR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"Spinning RR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"RR\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Dispatchable Load",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispdispload/2021/03/1/2",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispdispload",
+      "2021",
+      "03",
+      "1",
+      "2"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Net Border Schedules",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispdispload/2021/03/1/2",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispdispload",
+        "2021",
+        "03",
+        "1",
+        "2"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "19447"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"4bf7-CMMD4mePWncXFCuT7vjzqR22LDM\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 12 Oct 2021 14:31:51 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"THESAVROS1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"SFIKIA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Schedule Per Unit",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispscheduleperunit/2021/03/1/2",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispscheduleperunit",
+      "2021",
+      "03",
+      "1",
+      "2"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Schedule Per Unit",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispscheduleperunit/2021/03/1/2",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispscheduleperunit",
+        "2021",
+        "03",
+        "1",
+        "2"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "431072"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"693e0-69XJMZSPHSsUkpSE537vXgkFxas\""
+      },
+      {
+       "key": "Date",
+       "value": "Wed, 13 Oct 2021 06:19:11 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"MELITI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MEGALOPOLI_V\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ALOUMINIO\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS5\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KASTRAKI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MEGALOPOLI3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"HERON2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ALIVERI5\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"PROTERGIA_CC\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"SFIKIA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"POURNARI2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KREMASTA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MEGALOPOLI4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ELPEDISON_THESS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"HERON_CC\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AMYNDEO2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ASOMATA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"STRATOS1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AGRAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"POURNARI1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AMYNDEO1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"LAVRIO4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"LADONAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KARDIA3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KARDIA4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ELPEDISON_THISVI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"POLYFYTO\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"PLASTIRAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"PLATANOVRYSI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"LAVRIO5\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"P_AOOU\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"EDESSAIOS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"HERON1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KORINTHOS_POWER\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KOMOTINI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"HERON3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ILARIONAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Reserve Schedule Per Unit",
+   "protocolProfileBehavior": {
+    "disableBodyPruning": true
+   },
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "body": {
+     "mode": "raw",
+     "raw": "{\r\n    \"reserveType\":\"mFRR\",\r\n    \"reserveDirection\":\"DOWN\",\r\n    \"reserveSource\":\"Load\"\r\n}",
+     "options": {
+      "raw": {
+       "language": "json"
+      }
+     }
+    },
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispreservescheduleperunit/2021/03/1/2",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispreservescheduleperunit",
+      "2021",
+      "03",
+      "1",
+      "2"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Reserve Schedule Per Unit",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "body": {
+       "mode": "raw",
+       "raw": "{\r\n    \"reserveType\":\"mFRR\",\r\n    \"reserveDirection\":\"DOWN\",\r\n    \"reserveSource\":\"Load\"\r\n}",
+       "options": {
+        "raw": {
+         "language": "json"
+        }
+       }
+      },
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispreservescheduleperunit/2021/03/1/2",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispreservescheduleperunit",
+        "2021",
+        "03",
+        "1",
+        "2"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "212649"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"33ea9-zl1DmkZjmDBD5ag2q4QyMi2o7BY\""
+      },
+      {
+       "key": "Set-Cookie",
+       "value": "connect.sid=s%3AKKq5_JC40lLOSh6YRlSxMm0juYq55PxU.WHw4yQthFiJEkTRX%2B52X7BJotrx8q9j0z4QRhx7kaxc; Path=/; HttpOnly"
+      },
+      {
+       "key": "Date",
+       "value": "Wed, 13 Oct 2021 06:45:30 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"},\"reserveType\":{\"type\":\"string\"},\"reserveDirection\":{\"type\":\"string\"},\"reserveSource\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"ELPEDISON_THISVI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KARDIA4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"POURNARI2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"HERON3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ASOMATA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MEGALOPOLI_V\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ILARIONAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"LAVRIO4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KREMASTA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AMYNDEO2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"EDESSAIOS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ALOUMINIO\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MEGALOPOLI3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"P_AOOU\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"HERON_CC\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS5\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"PLATANOVRYSI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"HERON1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"POLYFYTO\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"LAVRIO5\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AGRAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KASTRAKI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MELITI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"PROTERGIA_CC\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"MEGALOPOLI4\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"LADONAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ELPEDISON_THESS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KARDIA3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"POURNARI1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"HERON2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AG_DIMITRIOS3\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"THESAVROS2\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"SFIKIA\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KOMOTINI\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"STRATOS1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ALIVERI5\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"KORINTHOS_POWER\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"AMYNDEO1\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"PLASTIRAS\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Activated Energy (Total)",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispactivatedenergytotals/2021/03/1/2",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispactivatedenergytotals",
+      "2021",
+      "03",
+      "1",
+      "2"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Activated Energy (Total)",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispactivatedenergytotals/2021/03/1/2",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispactivatedenergytotals",
+        "2021",
+        "03",
+        "1",
+        "2"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "5547"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"15ab-zi/so7T5jcGtQCswE6sYQqy6Bb0\""
+      },
+      {
+       "key": "Date",
+       "value": "Mon, 18 Oct 2021 14:24:40 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"ISPScheduleTotals\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP CCGT Schedule (Total)",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispccgtscheduletotals/2021/03/1/2",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispccgtscheduletotals",
+      "2021",
+      "03",
+      "1",
+      "2"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP CCGT Schedule (Total)",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispccgtscheduletotals/2021/03/1/2",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispccgtscheduletotals",
+        "2021",
+        "03",
+        "1",
+        "2"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "5428"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"1534-pTUM9h6iOCO8c31dOH8os8ZsCgc\""
+      },
+      {
+       "key": "Date",
+       "value": "Mon, 18 Oct 2021 14:41:26 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"ISPCCGTScheduleTotals\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
+  },
+  {
+   "name": "GR Market-ISP Net Border Schedules",
+   "request": {
+    "method": "GET",
+    "header": [
+     {
+      "key": "x-auth-key",
+      "value": "{{apiKey}}",
+      "type": "text"
+     }
+    ],
+    "url": {
+     "raw": "{{protocol}}://{{baseUrl}}/api/v3/data/ispnetborderschedules/2021/03/1/2",
+     "protocol": "{{protocol}}",
+     "host": [
+      "{{baseUrl}}"
+     ],
+     "path": [
+      "api",
+      "v3",
+      "data",
+      "ispnetborderschedules",
+      "2021",
+      "03",
+      "1",
+      "2"
+     ]
+    }
+   },
+   "response": [
+    {
+     "name": "GR Market-ISP Net Border Schedules",
+     "originalRequest": {
+      "method": "GET",
+      "header": [
+       {
+        "key": "x-auth-key",
+        "value": "ASLDKJASDJK2534S",
+        "type": "text"
+       }
+      ],
+      "url": {
+       "raw": "https://localhost/api/v3/data/ispnetborderschedules/2021/03/1/2",
+       "protocol": "https",
+       "host": [
+        "localhost"
+       ],
+       "path": [
+        "api",
+        "v3",
+        "data",
+        "ispnetborderschedules",
+        "2021",
+        "03",
+        "1",
+        "2"
+       ]
+      }
+     },
+     "status": "OK",
+     "code": 200,
+     "_postman_previewlanguage": "json",
+     "header": [
+      {
+       "key": "X-Powered-By",
+       "value": "Express"
+      },
+      {
+       "key": "Access-Control-Allow-Origin",
+       "value": "*"
+      },
+      {
+       "key": "Access-Control-Allow-Headers",
+       "value": "Origin, X-Requested-With, Content-Type, Accept, x-auth-token"
+      },
+      {
+       "key": "Access-Control-Allow-Methods",
+       "value": "POST, GET, PUT, DELETE, OPTIONS"
+      },
+      {
+       "key": "Content-Type",
+       "value": "application/json; charset=utf-8"
+      },
+      {
+       "key": "Content-Length",
+       "value": "25489"
+      },
+      {
+       "key": "ETag",
+       "value": "W/\"6391-tlazfuyzw3xvLPtC6nwd8nqIDi8\""
+      },
+      {
+       "key": "Date",
+       "value": "Tue, 19 Oct 2021 15:10:36 GMT"
+      },
+      {
+       "key": "Connection",
+       "value": "keep-alive"
+      }
+     ],
+     "cookie": [],
+     "body": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"meta\":{\"type\":\"object\",\"properties\":{\"requestParams\":{\"type\":\"object\",\"properties\":{\"year\":{\"type\":\"string\"},\"month\":{\"type\":\"string\"},\"day\":{\"type\":\"string\"},\"duration\":{\"type\":\"string\"}}},\"timezone\":{\"type\":\"string\"},\"offeringName\":{\"type\":\"string\"},\"updatedOn\":{\"type\":\"string\"},\"source\":{\"type\":\"string\"}}},\"data\":{\"type\":\"object\",\"properties\":{\"ALBANIA_OST_BZ_BZN -> GREECE_IPTO_BZ_BZN\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"BULGARIA_ESO_BZ_BZN -> GREECE_IPTO_BZ_BZN\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"GREECE_IPTO_BZ_BZN -> ITALY_IT_BRINDISI_BZ_BZN\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"NORTH_MACEDONIA_MEPSO_BZ_BZN -> GREECE_IPTO_BZ_BZN\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"TURKEY_TURKEY_BZ_BZN -> GREECE_IPTO_BZ_BZN\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"ITALY_IT_BRINDISI_BZ_BZN -> GREECE_IPTO_BZ_BZN\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"GREECE_IPTO_BZ_BZN -> BULGARIA_ESO_BZ_BZN\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}},\"GREECE_IPTO_BZ_BZN -> NORTH_MACEDONIA_MEPSO_BZ_BZN\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"DateTime\":{\"type\":\"string\"},\"value\":{\"type\":\"number\"}},\"required\":[\"DateTime\",\"value\"]}}}}}}"
+    }
+   ]
   }
  ],
  "event": [
@@ -734,12 +2638,12 @@
  ],
  "variable": [
   {
-   "key": "baseUrl",
-   "value": "api.diem-platform.com"
-  },
-  {
    "key": "protocol",
    "value": "https"
+  },
+  {
+   "key": "baseUrl",
+   "value": "api.diem-platform.com"
   },
   {
    "key": "apiKey",

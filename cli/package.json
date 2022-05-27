@@ -9,7 +9,6 @@
   "keywords": [
     "cli"
   ],
-
   "author": "Nafsika Abatzi",
   "license": "ISC",
   "dependencies": {
@@ -19,6 +18,7 @@
     "clear": "^0.1.0",
     "clui": "^0.3.6",
     "configstore": "^6.0.0",
+    "cucumber": "^6.0.7",
     "figlet": "^1.5.2",
     "inquirer": "^8.2.4",
     "lodash": "^4.17.21",

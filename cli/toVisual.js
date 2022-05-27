@@ -21,20 +21,8 @@ module.exports = {
       },
       {
         type: 'input',
-        name: 'output',
-        message: 'Enter the name of the created file:',
-        validate: function( value ) {
-          if (value.includes(".yaml")) {
-            return true;
-          } else {
-            return 'Please enter a valid filename (.yaml).';
-          }
-        }
-      },
-      {
-        type: 'input',
         name: 'description',
-        message: 'Enter any extra comment:',
+        message: 'Enter extra documentation:',
        
       },
     

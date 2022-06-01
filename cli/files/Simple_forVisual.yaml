@@ -11,11 +11,15 @@ paths:
       tags:
         - General
       summary: GR Market-Market Results Demand
+      operationId:  GR Market-Market Results Demand
+      description: New Documentation
+      x-codegen-request-body-name: rest_service14request
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              $ref: "#/components/schemas/rest_service14request"
             example:
               class: CRETE LOAD
               direction: 1
@@ -88,6 +92,7 @@ paths:
             application/json:
               schema:
                 type: object
+                $ref: "#/components/schemas/REST_ServiceResponse90"
               example:
                 $schema: http://json-schema.org/draft-04/schema#
                 type: object
@@ -146,11 +151,15 @@ paths:
       tags:
         - General
       summary: GR Market-Market Results BorderSchedules All Interconnections
+      operationId:  GR Market-Market Results BorderSchedules All Interconnections
+      description: New Documentation
+      x-codegen-request-body-name: rest_service149request
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              $ref: "#/components/schemas/rest_service149request"
             example:
               class: Imports
               direction: 0
@@ -165,17 +174,20 @@ paths:
         '200':
           description: Successful response
           content:
-            application/json: {}
   /api/v3/data/henexmarketresultsborderschedules/2021/10/29/3:
     get:
       tags:
         - General
       summary: GR Market-Market Results BorderSchedules
+      operationId:  GR Market-Market Results BorderSchedules
+      description: New Documentation
+      x-codegen-request-body-name: rest_service174request
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              $ref: "#/components/schemas/rest_service174request"
             example:
               interconnection: AL-GR
               direction: 0
@@ -190,17 +202,20 @@ paths:
         '200':
           description: Successful response
           content:
-            application/json: {}
   /api/v3/data/henexmarketresultsperproductiontechnology/2020/10/28/500:
     get:
       tags:
         - General
       summary: GR Market-Market Results Per Production Technology
+      operationId:  GR Market-Market Results Per Production Technology
+      description: New Documentation
+      x-codegen-request-body-name: rest_service199request
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              $ref: "#/components/schemas/rest_service199request"
             example:
               technology: CRETE CONVENTIONAL
               direction: 0
@@ -215,17 +230,20 @@ paths:
         '200':
           description: Successful response
           content:
-            application/json: {}
   /api/v3/data/henexmarketresultsperproductiontechnologypermarket/2020/10/28/2000:
     get:
       tags:
         - General
       summary: GR Market-Market Results Per Production Technology Per Market
+      operationId:  GR Market-Market Results Per Production Technology Per Market
+      description: New Documentation
+      x-codegen-request-body-name: rest_service224request
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              $ref: "#/components/schemas/rest_service224request"
             example:
               technology: CRETE CONVENTIONAL
               direction: 0
@@ -239,17 +257,20 @@ paths:
         '200':
           description: Successful response
           content:
-            application/json: {}
   /api/v3/data/henexmarketresultspricespermarket/2020/10/28/20:
     get:
       tags:
         - General
       summary: GR Market-Market Results Prices Per Market
+      operationId:  GR Market-Market Results Prices Per Market
+      description: New Documentation
+      x-codegen-request-body-name: rest_service248request
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              $ref: "#/components/schemas/rest_service248request"
             example:
               direction: 0
       parameters:
@@ -262,17 +283,20 @@ paths:
         '200':
           description: Successful response
           content:
-            application/json: {}
   /api/v3/data/henexmarketresultsprices/2020/10/28/5:
     get:
       tags:
         - General
       summary: GR Market-Market Results Prices
+      operationId:  GR Market-Market Results Prices
+      description: New Documentation
+      x-codegen-request-body-name: rest_service271request
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              $ref: "#/components/schemas/rest_service271request"
             example:
               direction: 0
               market: DAM
@@ -286,17 +310,20 @@ paths:
         '200':
           description: Successful response
           content:
-            application/json: {}
   /api/v3/data/henexpremarketresultsborderschedules/2020/10/28/5:
     get:
       tags:
         - General
       summary: GR Market-PreMarket Results BorderSchedules
+      operationId:  GR Market-PreMarket Results BorderSchedules
+      description: New Documentation
+      x-codegen-request-body-name: rest_service295request
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              $ref: "#/components/schemas/rest_service295request"
             example:
               direction: 0
               interconnection: AL-GR
@@ -310,17 +337,20 @@ paths:
         '200':
           description: Successful response
           content:
-            application/json: {}
   /api/v3/data/henexpremarketresultsborderschedulesall/2020/10/28/5:
     get:
       tags:
         - General
       summary: GR Market-PreMarket Results BorderSchedules All Interconnections
+      operationId:  GR Market-PreMarket Results BorderSchedules All Interconnections
+      description: New Documentation
+      x-codegen-request-body-name: rest_service319request
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              $ref: "#/components/schemas/rest_service319request"
             example:
               direction: 0
               class: Import
@@ -336,17 +366,20 @@ paths:
         '200':
           description: Successful response
           content:
-            application/json: {}
   /api/v3/data/henexpremarketresultsdemand/2020/10/28/5:
     get:
       tags:
         - General
       summary: GR Market-PreMarket Results Demand
+      operationId:  GR Market-PreMarket Results Demand
+      description: New Documentation
+      x-codegen-request-body-name: rest_service345request
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              $ref: "#/components/schemas/rest_service345request"
             example:
               direction: 1
               class: LV
@@ -371,17 +404,20 @@ paths:
         '200':
           description: Successful response
           content:
-            application/json: {}
   /api/v3/data/henexpremarketsummaryperproductiontechnology/2020/10/28/5:
     get:
       tags:
         - General
       summary: GR Market-PreMarket Summary per Production Technology
+      operationId:  GR Market-PreMarket Summary per Production Technology
+      description: New Documentation
+      x-codegen-request-body-name: rest_service380request
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              $ref: "#/components/schemas/rest_service380request"
             example:
               direction: 0
               technology: Lignite
@@ -396,17 +432,20 @@ paths:
         '200':
           description: Successful response
           content:
-            application/json: {}
   /api/v3/data/henexmarketresultsdemandpermarket/2020/10/28/500:
     get:
       tags:
         - General
       summary: GR Market-Market Results Demand Per Market
+      operationId:  GR Market-Market Results Demand Per Market
+      description: New Documentation
+      x-codegen-request-body-name: rest_service405request
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              $ref: "#/components/schemas/rest_service405request"
             example:
               direction: 0
               class: HV
@@ -420,4 +459,129 @@ paths:
         '200':
           description: Successful response
           content:
-            application/json: {}
+components:
+  schemas:
+     rest_service14request:
+       type: object
+       properties: 
+         class: 
+           type:  string
+         direction: 
+           type:  string
+         market: 
+           type:  string
+         meta: 
+           $ref: "#/components/schemas/rest_service14request_meta"
+     rest_service14request_meta:
+       type: object
+       properties: 
+         requestParams: 
+           $ref: "#/components/schemas/rest_service14request_requestParams"
+     rest_service14request_requestParams:
+       type: object
+       properties: 
+         year: 
+           type:  string
+         month: 
+           type:  string
+         day: 
+           type:  string
+         duration: 
+           type:  string
+         class: 
+           type:  string
+         market: 
+           type:  string
+         direction: 
+           type:  string
+     REST_ServiceResponse90:
+       type: object
+     rest_service149request:
+       type: object
+       properties: 
+         class: 
+           type:  string
+         direction: 
+           type:  string
+         market: 
+           type:  string
+     rest_service174request:
+       type: object
+       properties: 
+         interconnection: 
+           type:  string
+         direction: 
+           type:  string
+         market: 
+           type:  string
+     rest_service199request:
+       type: object
+       properties: 
+         technology: 
+           type:  string
+         direction: 
+           type:  string
+         market: 
+           type:  string
+     rest_service224request:
+       type: object
+       properties: 
+         technology: 
+           type:  string
+         direction: 
+           type:  string
+     rest_service248request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+     rest_service271request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+         market: 
+           type:  string
+     rest_service295request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+         interconnection: 
+           type:  string
+     rest_service319request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+         class: 
+           type:  string
+         market: 
+           type:  string
+         timezone: 
+           type:  string
+     rest_service345request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+         class: 
+           type:  string
+         market: 
+           type:  string
+     rest_service380request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+         technology: 
+           type:  string
+         market: 
+           type:  string
+     rest_service405request:
+       type: object
+       properties: 
+         direction: 
+           type:  string
+         class: 
+           type:  string

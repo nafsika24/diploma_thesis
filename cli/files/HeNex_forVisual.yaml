@@ -10,6 +10,7 @@ paths:
     get:
       tags:
         - General
+      summary: GR Market-Market Results Demand
       operationId:  GR Market-Market Results Demand
       description: 
       x-codegen-request-body-name: rest_service14request
@@ -149,6 +150,7 @@ paths:
     get:
       tags:
         - General
+      summary: GR Market-Market Results BorderSchedules All Interconnections
       operationId:  GR Market-Market Results BorderSchedules All Interconnections
       description: 
       x-codegen-request-body-name: rest_service149request
@@ -176,6 +178,7 @@ paths:
     get:
       tags:
         - General
+      summary: GR Market-Market Results BorderSchedules
       operationId:  GR Market-Market Results BorderSchedules
       description: 
       x-codegen-request-body-name: rest_service174request
@@ -203,6 +206,7 @@ paths:
     get:
       tags:
         - General
+      summary: GR Market-Market Results Per Production Technology
       operationId:  GR Market-Market Results Per Production Technology
       description: 
       x-codegen-request-body-name: rest_service199request
@@ -230,6 +234,7 @@ paths:
     get:
       tags:
         - General
+      summary: GR Market-Market Results Per Production Technology Per Market
       operationId:  GR Market-Market Results Per Production Technology Per Market
       description: 
       x-codegen-request-body-name: rest_service224request
@@ -256,6 +261,7 @@ paths:
     get:
       tags:
         - General
+      summary: GR Market-Market Results Prices Per Market
       operationId:  GR Market-Market Results Prices Per Market
       description: 
       x-codegen-request-body-name: rest_service248request
@@ -281,6 +287,7 @@ paths:
     get:
       tags:
         - General
+      summary: GR Market-Market Results Prices
       operationId:  GR Market-Market Results Prices
       description: 
       x-codegen-request-body-name: rest_service271request
@@ -307,6 +314,7 @@ paths:
     get:
       tags:
         - General
+      summary: GR Market-PreMarket Results BorderSchedules
       operationId:  GR Market-PreMarket Results BorderSchedules
       description: 
       x-codegen-request-body-name: rest_service295request
@@ -333,6 +341,7 @@ paths:
     get:
       tags:
         - General
+      summary: GR Market-PreMarket Results BorderSchedules All Interconnections
       operationId:  GR Market-PreMarket Results BorderSchedules All Interconnections
       description: 
       x-codegen-request-body-name: rest_service319request
@@ -361,6 +370,7 @@ paths:
     get:
       tags:
         - General
+      summary: GR Market-PreMarket Results Demand
       operationId:  GR Market-PreMarket Results Demand
       description: 
       x-codegen-request-body-name: rest_service345request
@@ -398,6 +408,7 @@ paths:
     get:
       tags:
         - General
+      summary: GR Market-PreMarket Summary per Production Technology
       operationId:  GR Market-PreMarket Summary per Production Technology
       description: 
       x-codegen-request-body-name: rest_service380request
@@ -425,6 +436,7 @@ paths:
     get:
       tags:
         - General
+      summary: GR Market-Market Results Demand Per Market
       operationId:  GR Market-Market Results Demand Per Market
       description: 
       x-codegen-request-body-name: rest_service405request
@@ -459,12 +471,12 @@ components:
          market: 
            type:  string
          meta: 
-           $ref:"#/components/schemas/rest_service14request_meta
+           $ref: "#/components/schemas/rest_service14request_meta"
      rest_service14request_meta:
        type: object
        properties: 
          requestParams: 
-           $ref:"#/components/schemas/rest_service14request_requestParams
+           $ref: "#/components/schemas/rest_service14request_requestParams"
      rest_service14request_requestParams:
        type: object
        properties: 

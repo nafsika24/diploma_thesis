@@ -36,7 +36,6 @@ module.exports =  {
         if(line.includes("responses:")){
            responses_found = true;
             output.write(line + '\n')
-            //console.log(line)
         }
         else if(line.includes("example:") && responses_found == true){
             responses_found = false;

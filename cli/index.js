@@ -29,10 +29,10 @@ inquirer
       choices: [
         new inquirer.Separator(''),
         {
-          name: 'Postman to OpenApi',
+          name: 'Postman to OpenAPI',
         },
         {
-          name: 'OpenApi to Postman',
+          name: 'OpenAPI to Postman',
         },
         {
             name: 'exit'
@@ -54,7 +54,7 @@ inquirer
 
     ans = answers["Option"][0]
     // convert json to yaml
-    if(ans == 'Postman to OpenApi'){
+    if(ans == 'Postman to OpenAPI'){
 
       // check if there are examples at the response body
         const res = await exampleAsk.exampleAsk();
@@ -118,13 +118,13 @@ inquirer
       console.log(chalk.red.bold("Options:"));   
       console.log(" ")
 
-      console.log(chalk.red.bold("1. Postman to OpenApi:"));  
+      console.log(chalk.red.bold("1. Postman to OpenAPI:"));  
       console.log(chalk.green("You give as input a Postman Collection(.json) file, the name of the output file(.yaml) and if needed an extra description.")) 
       console.log(chalk.green("The result can be imported to Visual Paradigm and visualized through a Class Diagram.")) 
 
       console.log(" ")
-      console.log(chalk.red.bold("2. OpenApi to Postman:"));  
-      console.log(chalk.green("You give as input the generated OpenApi (.yaml) file from the Visual Paradigm and the name of the output file(.yaml).")) 
+      console.log(chalk.red.bold("2. OpenAPI to Postman:"));  
+      console.log(chalk.green("You give as input the generated OpenAPI (.yaml) file from the Visual Paradigm and the name of the output file(.yaml).")) 
       console.log(chalk.green("The result can be imported to Postman to create a new API and collection.")) 
 
       console.log(" ")
@@ -136,7 +136,7 @@ inquirer
 
     // prepare yaml collection to import as API at POstman
     else{
-        console.log("Openapi to Postman")
+        console.log("OpenAPI to Postman")
         const res = await inquirer2.toPostmanConvert();
         const input_file = String(res["input"])
         output_file = input_file.split(".yaml")[0] + "_forPostman.yaml"

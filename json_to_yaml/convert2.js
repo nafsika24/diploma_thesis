@@ -7,13 +7,6 @@ const { exit } = require('process');
 var output;
 
 
-
-// // Postman Collection Path
-// const postmanCollection = String(myArgs[0])
-
-// // Output OpenAPI Path
-// const outputFile = "./" + String(myArgs[1])
-
 module.exports =  {
 
     visual_2: (inputFile,outputFile,description_to_add) => {
@@ -54,6 +47,8 @@ module.exports =  {
             if(line.includes("summary:") && variables == true){
                 const sum1 = line.split("summary:")[1]
                 //console.log(line)
+                output.write(line + '\n')
+
                 output.write("      operationId: " + String(sum1) + '\n') 
                 output.write("      description: " + String(description_to_add) + '\n') 
             } 
@@ -136,6 +131,7 @@ module.exports =  {
             for(let i = 0; i < components_arr.length; i++){
                 if(components_arr[i].includes("request")){
                     fs.appendFileSync(outputFile, '     ' + components_arr[i] +':' + '\n' + '       type: object' + '\n' + "       properties: \n"  );
+                    //console.log(res_ex[i])
                 
                     for (let j = 0; j < res_ex[i].length; j++){
                         var towrite = res_ex[i][j].split(":")
@@ -144,7 +140,7 @@ module.exports =  {
                         //console.log(re2, typeof(re2))
                         if(String(re2).includes('object')){
                             fs.appendFileSync(outputFile, '         ' + re1 +": " + '\n' )
-                            fs.appendFileSync(outputFile, '           ' + "$ref:" + '"#' + '/components/schemas/' + components_arr[i] + "_" + re1 +  '\n')
+                            fs.appendFileSync(outputFile, '           ' + '$ref:' + ' "#' + '/components/schemas/' + components_arr[i] + "_" + re1 + '"'+  '\n')
 
                             fs.appendFileSync(outputFile, '     ' + components_arr[i] + "_" + re1 +':' + '\n' + '       type: object' + '\n' + "       properties: \n");
                         }

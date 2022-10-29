@@ -75,6 +75,13 @@ module.exports =  {
         let res_ex = []
         let res_ex_one = []
 
+        let response_ex = []
+        let response_ex_one = []
+
+        var response_begin = false;
+
+        var current = "";
+        var prev = "";
      
         lineReader.on('line', function (line) {
             const rest = "rest_service" + x + "request"
@@ -99,6 +106,9 @@ module.exports =  {
                 output.write(line + '\n')
 
             }
+
+
+            // add parameters at request classes
             else if(req_examples == true && line.includes("parameters:") == false && line.includes("responses:") == false){
                 //console.log(line)
                 output.write(line + '\n')
@@ -119,6 +129,45 @@ module.exports =  {
                 res_ex.push(res_ex_one)
                 res_ex_one = []
             }
+
+         else if(response_begin == true && line.charAt(2) !== '/' && line.includes("required:") == false){
+             //console.log(line)
+             if(line.includes("$schema:") == false && line.includes("properties:") == false){
+
+                prev = current;
+                current = line;
+                if(prev !== ''){
+                    const attr1 = prev
+                    attr3 = line.split(":")[1]
+                    if(attr1.includes("type:") == false){
+                        if(attr3.includes("array")){
+                            attr3 = "object"
+                        }
+                        response_ex_one.push(attr1.trim() + attr3 + ',') 
+
+                        //console.log(attr1,attr2)
+
+                    }
+   
+                }
+             }
+        
+
+         
+             //console.log("first:      " + line.charAt(2))
+             output.write(line + '\n')
+
+         }
+         else if(response_begin == true && (line.charAt(2) == '/' || line.includes("required:"))){
+            output.write(line + '\n')
+            response_begin = false;
+            response_ex.push(response_ex_one)
+            response_ex_one = []
+            console.log(response_ex)
+
+
+        }
+
             else if(line.includes("type") && state == true){
 
                 output.write(line + '\n')
@@ -129,7 +178,6 @@ module.exports =  {
 
            else if(line.includes("responses")){
                 state1 = true
-                //output.write("      x-codegen-request-body-name: " + rest+ '\n')
                 output.write(line + '\n')
             }
             else if(line.includes("content") && state1 ==  true){
@@ -143,8 +191,10 @@ module.exports =  {
             else if(line.includes("application/json: {}")){
                 state1 = state2 = false
             }
+            // response found to add REST_ServiceResponse at list
             else if(line.includes("type") && state1 == true && state2 ==  true){
-                components_arr.push("REST_ServiceResponse" + x )
+                response_begin = true;
+                components_arr.push("rest_serviceResponse" + x )
 
                 output.write(line + '\n')
                 const res = '"#' + '/components/schemas/' + components_arr[components_arr.length - 1] + '"'
@@ -162,6 +212,7 @@ module.exports =  {
             fs.appendFileSync(outputFile, 'components:' + '\n');
             fs.appendFileSync(outputFile, '  schemas:' + '\n');
             var counter = 0;
+            var counter2 = 0;
             for(let i = 0; i < components_arr.length; i++){
                 if(components_arr[i].includes("request")){
                     fs.appendFileSync(outputFile, '     ' + components_arr[i] +':' + '\n' + '       type: object' + '\n' + "       properties: \n"  );
@@ -187,7 +238,25 @@ module.exports =  {
                     counter = counter + 1
                 }
                 else{
-                    fs.appendFileSync(outputFile, '     ' + components_arr[i] +':' + '\n' + '       type: object' + '\n');
+                    fs.appendFileSync(outputFile, '     ' + components_arr[i] +':' + '\n' + '       type: object' + '\n' + "       properties: \n"  );
+                    for (let j = 0; j < response_ex[counter2].length; j++){
+                        var towrite = response_ex[counter2][j].split(":")
+                        var re1 = towrite[0]
+                        var re2 = String(towrite[1]).replace(",","")
+                        //console.log(re2, typeof(re2))
+                        if(String(re2).includes('object')){
+                            fs.appendFileSync(outputFile, '         ' + re1 +": " + '\n' )
+                            fs.appendFileSync(outputFile, '           ' + '$ref:' + ' "#' + '/components/schemas/' + components_arr[i] + "_" + re1 + '"'+  '\n')
+
+                            fs.appendFileSync(outputFile, '     ' + components_arr[i] + "_" + re1 +':' + '\n' + '       type: object' + '\n' + "       properties: \n");
+                        }
+                        else{
+                            fs.appendFileSync(outputFile, '         ' + re1 +": " + '\n' )
+                            fs.appendFileSync(outputFile, '           ' + "type: " + re2 +  '\n')
+                        }
+            
+                    }
+                    counter2 = counter2 + 1
 
                 }
             }
